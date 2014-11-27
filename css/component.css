@@ -8,12 +8,13 @@
 
 .grid li {
 	display: inline-block;
-	/*width: 440px;*/
 	margin: 0;
-	padding: 20px;
+	padding: 4px;
 	text-align: left;
 	position: relative;
 	border: 1px solid;
+	margin-top:20px;
+	margin-left: 17px;
 }
 
 .grid figure {
@@ -38,6 +39,7 @@
 	padding: 20px;
 	background: #2c3f52;
 	color: #ed4e6e;
+
 }
 
 .grid figcaption h3 {
@@ -46,9 +48,9 @@
 	color: #fff;
 }
 
-.grid figcaption span:before {
+/*.grid figcaption span:before {
 	content: 'by ';
-}
+}*/
 
 .grid figcaption a {
 	text-align: center;
@@ -213,7 +215,7 @@
 
 .cs-style-4 figcaption {
 	height: 100%;
-	width: 50%;
+	width: 63%;
 	opacity: 0;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;

@@ -59,16 +59,16 @@ $.ajax({
 	}
 });
 
-$.ajax({
-	'url': "https://api.themoviedb.org/3/movie/tt1411697/videos?api_key=d1d7ccec36948efe0fe4750abc77836f",
-	'type': 'GET',
-	'dataType': "json",
-	success: function(data, textStats, XMLHttpRequest) {
+// $.ajax({
+// 	'url': "https://api.themoviedb.org/3/movie/tt1411697/videos?api_key=d1d7ccec36948efe0fe4750abc77836f",
+// 	'type': 'GET',
+// 	'dataType': "json",
+// 	success: function(data, textStats, XMLHttpRequest) {
 		
-		console.log(data);
+// 		console.log(data);
 	
-	},
-	error: function(data, textStatus, errorThrown) {
-		console.log("error");
-	}
-});
+// 	},
+// 	error: function(data, textStatus, errorThrown) {
+// 		console.log("error");
+// 	}
+// });

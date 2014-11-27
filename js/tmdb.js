@@ -37,7 +37,7 @@
 				}
 			};
 			xhr.send();
-			tmdb.call(url, params, success, error);
+			// tmdb.call(url, params, success, error);
 		}
 	}
 })()

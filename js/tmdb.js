@@ -46,7 +46,7 @@
 
 
 $.ajax({
-	'url': "https://api.themoviedb.org/3/movie/tt1411697?api_key=d1d7ccec36948efe0fe4750abc77836f",
+	'url': "https://api.themoviedb.org/3/search/movie?api_key=d1d7ccec36948efe0fe4750abc77836f&query=hunger+games",
 	'type': 'GET',
 	'dataType': "json",
 	success: function(data, textStats, XMLHttpRequest) {

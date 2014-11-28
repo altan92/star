@@ -1,3 +1,6 @@
+
+// I have added console logs for all the relevent data
+
 (function() {
 	window.tmdb = {
 		"api_key": "d1d7ccec36948efe0fe4750abc77836f",
@@ -42,20 +45,24 @@
 	}
 })()
 
-$("#target" ).submit(function( event ) {
+$("#target").submit(function() {
 	event.preventDefault();
 	var test =  $( "input:first" ).val() ;
 	var splitTest  = test.split(" ");
-	var searchString ="";
+	var searchString ="the+hangover";
 	
-	for(var i= 0; i < splitTest.length; i++){
-		searchString += splitTest[i] + "+";
-	}
+	// for(var i= 0; i < splitTest.length; i++){
+		// searchString += splitTest[i] + "+";
+	// }
+
+	// console.log(searchString);
+	
 	searchQuery(searchString);
  	
 });
 
 function searchQuery(searchQuery){
+	console.log(searchQuery);
 	$.ajax({
 		'url': "https://api.themoviedb.org/3/search/movie?api_key=d1d7ccec36948efe0fe4750abc77836f&query=" + searchQuery,
 		'type': 'GET',

@@ -1,6 +1,5 @@
 
 // I have added console logs for all the relevent data
-
 (function() {
 	window.tmdb = {
 		"api_key": "d1d7ccec36948efe0fe4750abc77836f",
@@ -49,11 +48,11 @@ $("#target").submit(function() {
 	event.preventDefault();
 	var test =  $( "input:first" ).val() ;
 	var splitTest  = test.split(" ");
-	var searchString ="the+hangover";
+	var searchString ="";
 	
-	// for(var i= 0; i < splitTest.length; i++){
-		// searchString += splitTest[i] + "+";
-	// }
+	for(var i= 0; i < splitTest.length; i++){
+		searchString += splitTest[i] + "+";
+	}
 
 	// console.log(searchString);
 	

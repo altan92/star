@@ -1,6 +1,4 @@
-
-// I have added console logs for all the relevent data
-
+// I have added console logs for all the relevent dat
 var tomatoeKey = "bx8uz4gdtrn2kx87czmpby74";
 
 $("#test" ).click(function() {
@@ -14,6 +12,27 @@ $("#test" ).click(function() {
 	rottenSearchQuery(searchString);
  	
 });
+
+$("#boxOfficelist").click(function() {
+	rottenBoxOffice();
+});
+
+
+function rottenBoxOffice(){	
+	$.ajax({
+		'url': "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey="+ tomatoeKey,
+		'type': 'GET',
+		'dataType': "jsonp",
+		success: function(data, textStats, XMLHttpRequest) {	
+			
+			printBoxOffice(data);
+		},
+		error: function(data, textStatus, errorThrown) {
+			console.log("error");
+		}
+	});
+  
+}
 
 
 
@@ -32,6 +51,17 @@ function rottenSearchQuery(searchQuery){
   
 }
 
+
+function printBoxOffice(data){
+	console.log("BOX OFFICE LIST");
+	console.log(data);
+
+	for (var i = 0 ; i < data.movies.length; i++) {
+		console.log(data.movies[i]["title"]);
+	};
+}
+
+
 function printRottenData(data){
 	console.log(data["title"]);
 	console.log(data["synopsis"]);
@@ -43,11 +73,7 @@ function printRottenData(data){
 	console.log(data["ratings"]["audience_score"]);
 	console.log(data["ratings"]["critics_score"]);
 	console.log(data["alternate_ids"]["imdb"]);
-	// console.log(data);
-
-
-
-
+	
 }
 
 

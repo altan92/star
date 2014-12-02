@@ -205,7 +205,7 @@
 	transition: transform 0.4s;
 }
 
-.no-touch .cs-style-4 figure:hover img,
+/*.no-touch .cs-style-4 figure:hover img,*/
 .cs-style-4 figure.cs-hover img {
 	-webkit-transform: translateX(25%);
 	-moz-transform: translateX(25%);

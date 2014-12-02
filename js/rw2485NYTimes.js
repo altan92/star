@@ -12,6 +12,21 @@ $(document).ready(function(){
     var randomUrl = "http://api.nytimes.com/svc/community/v2/comments/random.jsonp?api-key=";
     var moviesUrl = "http://api.nytimes.com/svc/movies/v2/reviews/search.jsonp?query=the+hunger+games&api-key=";
 	var articleURL = "http://api.nytimes.com/svc/search/v2/articlesearch.json?q=movies&fq=The+hunger+games&api-key=";
+	var searchQuery= "Hunger Games";
+	$.ajax({
+		//'url': "https://api.themoviedb.org/3/search/movie?api_key=d1d7ccec36948efe0fe4750abc77836f&query=" + searchQuery,
+		'url': "http://api.themoviedb.org/3/movie/popular?api_key=d1d7ccec36948efe0fe4750abc77836f",
+		'type': 'GET',
+		'dataType': "json",
+		success: function(data, textStats, XMLHttpRequest) {
+			imageLinkPrinter(data);
+			console.log(data);
+		},
+		error: function(data, textStatus, errorThrown) {
+			console.log("error");
+		}
+	});
+	
 
 $(document.body).on('click', '#movieReview', function() {
 	movieReviews();
@@ -105,6 +120,19 @@ function printArticleData(){
 
 	};
 	
+}
+function imageLinkPrinter(imageLink){
+	
+	
+	for(var i = 0; i < imageLink.results.length; i++){
+		var first_photo = imageLink.results[i];
+		first_photo["poster_path"]= "https://image.tmdb.org/t/p/original/" + first_photo["poster_path"];
+		var images = ich.images(first_photo);
+		$('#images').append(images);
+		//console.log(imageLink.results[i]);
+		//console.log(imageLink.results[i].backdrop_path);
+	}
+
 }
 
 

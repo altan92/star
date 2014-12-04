@@ -15,8 +15,8 @@
 	border: 1px solid;
 	margin-top:20px;
 	margin-left: 17px;
-	height:300px;
-	width:200px;
+	height:311px;
+	width:209px;
 }
 
 .grid figure {
@@ -82,7 +82,7 @@
 
 .no-touch .cs-style-1 figure:hover figcaption,
 .cs-style-1 figure.cs-hover figcaption {
-	opacity: .7;
+	opacity: .89;
 /*	-webkit-transform: translate(15px, 15px);
 	-moz-transform: translate(15px, 15px);
 	-ms-transform: translate(15px, 15px);

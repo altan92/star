@@ -126,7 +126,7 @@ function imageLinkPrinter(imageLink){
 	
 	for(var i = 0; i < imageLink.results.length; i++){
 		var first_photo = imageLink.results[i];
-		first_photo["poster_path"]= "https://image.tmdb.org/t/p/original/" + first_photo["poster_path"];
+		first_photo["poster_path"]= "https://image.tmdb.org/t/p/original" + first_photo["poster_path"];
 		var images = ich.images(first_photo);
 		$('#images').append(images);
 		//console.log(imageLink.results[i]);

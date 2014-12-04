@@ -10,12 +10,31 @@
 .search_result:hover { 
   background-color: rgba(0, 0, 0, 0.1);
 }
+#search-header{ 
+  height:14px;
+}
+
+.related{
+	 background-color: white;
+	 border: solid;
+	 width: 23%;
+	 float: right;
+	 position:fixed;
+	 margin-left: 939px;
+	 overflow-y: scroll;
+	 height:615px;
+	 /*min-height: 615px;*/
+}
 
 .search{
 	 background-color: white;
-	 border: solid;
+ 	/*border: solid;	
+	border-width: 1px;
+	border-color: black;*/
+	margin-left: 5px;
 	 width: 75%;
-	 height:150px;
+	 height:45px;
+	 float: left;
 }
 #wrapper{
 	padding: 91px 0;
@@ -54,4 +73,44 @@
 	margin-bottom: 4px;
 }
 
+.see-more{
+	margin-top: 50px;
+	background-color: #001F3F;
+	color:white;
+}
+.see-more:hover{
+	color:#DDDDDD;
+}
+.related-title{
+	color:black;
+	font:20px Serif;
+	text-align: center;
+}
+.related-header{
+	border: solid;	
+	border-width: 1px;
+	border-color: black;
+}
+
+.related-article{
+	border: solid;	
+	border-width: 1px;
+	border-color: black;
+}
+
+.headline{
+	color:black;
+	font:bold 15px Serif;
+	text-align: left;
+}
+.snippet{
+	color:black;
+	font:italic 14px Serif;
+	text-align: left;
+}
+#related-article{
+	color:blue;
+	text-align: center;
+	margin-left: 61px;
+}
 

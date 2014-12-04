@@ -11,7 +11,12 @@
   background-color: rgba(0, 0, 0, 0.1);
 }
 #search-header{ 
-  height:14px;
+	height:32px;
+	border: solid;	
+	border-width: 1px;
+	border-color: black;
+	margin-top: 0px;
+	margin-bottom: 6px;
 }
 
 .related{

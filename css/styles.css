@@ -121,6 +121,8 @@
 	color:black;
 	font:italic 14px Serif;
 	text-align: left;
+	height: 100px;
+	overflow-y: scroll;
 }
 #related-article{
 	color:blue;

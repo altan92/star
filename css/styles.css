@@ -27,7 +27,7 @@
 	 width: 23%;
 	 float: right;
 	 position:fixed;
-	 margin-left: 939px;
+	 margin-left: 920px;
 	 overflow-y: scroll;
 	 height:615px;
 	 /*min-height: 615px;*/
@@ -45,6 +45,7 @@
 }
 #wrapper{
 	padding: 91px 0;
+	margin-left:25px;
 }
 
 .image{
@@ -130,3 +131,77 @@
 	margin-left: 61px;
 }
 
+.info{
+	height:300px;
+	width:100%;
+	border: solid;	
+	border-width: 1px;
+	border-color: black;
+}
+
+.synopsis{
+	height:300px;
+	width:100%;
+	border: solid;	
+	border-width: 1px;
+	border-color: black;
+}
+
+.movie-reviews{
+	height:100px;
+	width:100%;
+	border: solid;	
+	border-width: 1px;
+	border-color: black;
+}
+
+.poster img{
+	height: 300px; 
+	width: 200px;
+	vertical-align:middle;
+}
+
+.poster {
+	height: 300px; 
+	vertical-align:middle;
+}
+
+#body{
+	margin-top: 100px;
+	margin-right: 50px;
+	margin-left: 50px;
+}
+
+.title h1{
+	color:black;
+	font:20px Serif;
+}
+
+.rate img{
+	height:50px; 
+	width:50px;
+	position:relative;
+}
+.rate{
+	height:50px; 
+	width:50px;
+}
+
+.rate h1{
+	margin-top: -34px;
+	color:black;
+	font:18px Arial bold;
+	margin-left: 16px;
+	position: relative;
+	float:left;
+}
+
+.information{
+	margin-top: -50px;
+	height:50px;
+	color:black;
+	font:18px Arial bold;
+	margin-left: 60px;
+	position: relative;	
+	border:solid;
+}

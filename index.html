@@ -72,15 +72,16 @@
 
                     
                     <div class="col-lg-2">
-                       
+                       <form action="search.html" method="get">
                         <div class="input-group" style="margin-top:5px;width:450px;margin-left:-320px;">
                            
                           
-                            <input type="text" class="form-control" placeholder="Search">
+                            <input id="movie" name="movie" type="text" class="form-control" placeholder="Search">
                             <span class="input-group-btn">
-                            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                            <button class="btn btn-default" type="button submit" value="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
     
                         </div><!-- /input-group -->
+                    </form>
   
                      </div><!-- /.col-lg-6 -->   
 
@@ -696,9 +697,6 @@
     <script src="js/classie.js"></script>
     <script src="js/cbpAnimatedHeader.js"></script>
 
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
 
     <!-- <script src="js/jquery-1.8.3.min.js"></script> -->
     
@@ -719,7 +717,7 @@
                         <figcaption>
                             <h3>{{title}}</h3>
                             <span>Directed by: Gary Ross</span>
-                            
+
                             <a href="" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Take a look</a>
                            
                         </figcaption>

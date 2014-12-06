@@ -10,7 +10,7 @@ $(document).ready(function(){
         movie: "a0d0c0d77f5bd871613018e23c2d4d85:8:70159037" 
     });
     var randomUrl = "http://api.nytimes.com/svc/community/v2/comments/random.jsonp?api-key=";
-    var moviesUrl = "http://api.nytimes.com/svc/movies/v2/reviews/search.jsonp?query=the+hunger+games&api-key=";
+    var moviesUrl = "http://api.nytimes.com/svc/movies/v2/reviews/search.jsonp?query=james+cameron&api-key=";
 	var articleURL = "http://api.nytimes.com/svc/search/v2/articlesearch.json?q=movies&fq=The+hunger+games&api-key=";
 	var searchQuery= "Hunger Games";
 	$.ajax({
@@ -78,6 +78,7 @@ function relatedArticle(){
 function printMovieData(){
 	var temp = JSON.parse(localStorage.getItem("movieReviews"));
 	console.log("Movie Data from New York Times");
+	console.log(temp)
 	for (var i = 0; i < temp.results.length ;i++) {
         var movieTitle  = temp.results[i]["display_title"];
         var headline  = temp.results[i]["headline"];

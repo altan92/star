@@ -4,6 +4,7 @@ y need to query the movie database. I have added console logs for all
 the relevent data */
 
 $(document).ready(function(){	
+	$("[data-toggle=popover]").popover();
 	var NYTimesKey = ({
         community: "db60e066b9b395d9b9edddb71342a983:13:70159037",
         article: "bcc7dfa0080d4655266e442f77465546:2:70159037",
@@ -130,6 +131,7 @@ function imageLinkPrinter(imageLink){
 		first_photo["poster_path"]= "https://image.tmdb.org/t/p/original" + first_photo["poster_path"];
 		var images = ich.images(first_photo);
 		$('#images').append(images);
+		$("[data-toggle=popover]").popover();
 		//console.log(imageLink.results[i]);
 		//console.log(imageLink.results[i].backdrop_path);
 	}

@@ -1,7 +1,12 @@
+
+.body-style{
+	background-color: #E6E6E6;
+}
+
 .search_result{
 	border: solid;	
 	border-width: 1px;
-	border-color: darkblue;
+	/*border-color: darkblue;*/
 	height:150px;
 	background-color: white;
 	margin-bottom: 6px;
@@ -18,7 +23,7 @@
 	border-color: black;
 	margin-top: 0px;
 	margin-bottom: 6px;
-	outline: 1px solid darkblue;
+	/*outline: 1px solid darkblue;*/
 }
 
 .related{
@@ -39,13 +44,15 @@
 	border-width: 1px;
 	border-color: black;*/
 	margin-left: 5px;
-	 width: 75%;
+	 width: 70%;
 	 height:45px;
 	 float: left;
 }
 #wrapper{
-	padding: 91px 0;
-	margin-left:25px;
+	/*padding: 91px 0;*/
+	padding-right: 0%;
+	margin-left:2%;
+
 }
 
 .image{
@@ -90,7 +97,7 @@
 }
 .see-more{
 	margin-top: 50px;
-	background-color: #001F3F;
+	background-color: #FDC103;
 	color:white;
 }
 .see-more:hover{

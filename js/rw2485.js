@@ -366,3 +366,15 @@ function rottenBoxOffice(){
 	});
   
 }
+
+
+$('#container').freetile();
+
+$('#container').freetile({
+    animate: true,
+    elementDelay: 30
+});
+
+$('#container').freetile({
+    selector: '.thumbs'
+});

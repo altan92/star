@@ -78,6 +78,7 @@ function relatedArticle(){
 function printMovieData(){
 	var temp = JSON.parse(localStorage.getItem("movieReviews"));
 	console.log("Movie Data from New York Times");
+	console.log(temp)
 	for (var i = 0; i < temp.results.length ;i++) {
         var movieTitle  = temp.results[i]["display_title"];
         var headline  = temp.results[i]["headline"];

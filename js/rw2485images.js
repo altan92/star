@@ -63,6 +63,7 @@ $("#target").submit(function() {
 function searchQuery(searchQuery){
 	console.log(searchQuery);
 	$.ajax({
+		
 		'url': "https://api.themoviedb.org/3/search/movie?api_key=d1d7ccec36948efe0fe4750abc77836f&query=" + searchQuery,
 		'type': 'GET',
 		'dataType': "json",

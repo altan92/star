@@ -274,14 +274,9 @@ function imageLinkPrinter(imageLink){
 })()
 
 
-
-
-
 function rottenDataforSpecificMovie(data){
 	console.log(data);
 	var title = data["title"];
-
-
 }
 
 function imageLinkPrinter(imageLink){

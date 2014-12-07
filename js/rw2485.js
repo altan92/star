@@ -23,21 +23,6 @@ var NYTimesKey = ({
     var randomUrl = "http://api.nytimes.com/svc/community/v2/comments/random.jsonp?api-key=";
 	
 
-//list of BoxOffice movies from rotten tomatoes
-function rottenBoxOffice(){	
-	$.ajax({
-		'url': "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey="+ tomatoeKey,
-		'type': 'GET',
-		'dataType': "jsonp",
-		success: function(data, textStats, XMLHttpRequest) {				
-			printBoxOffice(data);
-		},
-		error: function(data, textStatus, errorThrown) {
-			console.log("error");
-		}
-	});
-  
-}
 
 //the search bar. Any query typed here will result in a list of movies 
 //from rotten tomatoes to populate the search page. Every movie has an
@@ -45,38 +30,22 @@ function rottenBoxOffice(){
 $("#target").submit(function() {
 	event.preventDefault();
 	var test =  $( "input:first" ).val() ;
-	var searchString =test["title"].split(' ').join('+');
+	var searchString = test.split(' ').join('+');
 	rottenSearchQuery(searchString);
 	// imdb(searchString)
  	// rottenBoxOffice();
-
 });
-
-
-function imdb(searchString){
-	console.log(searchString);
-	var imdbRequest = "http://www.omdbapi.com/?t="+ searcharchString +"&y=&plot=full&r=jsonp"
-	$.ajax({
-			'url': imdbRequest,
-			'type': 'GET',
-			'dataType': "jsonp",
-			success: function(data, textStats, XMLHttpRequest) {	
-				console.log(data);
-			},
-			error: function(data, textStatus, errorThrown) {
-				console.log("error");
-			}
-		});
-}
 
 //clicking this will search the movie by id 
 $(document.body).on('click', '#relatedArticles', function() {
-	var movieID = "327y239"; // get this value from value saved in html
+	var movieID = "770672122"; // get this value from value saved in html
 	rottenSearchQueryWithID(movieID);
 });
 
 
-
+//this function is connected to the search bar. This will return a list of 
+//realted movies. Each HTML Div generated from this should hold the "id" attribute
+//The profile page will use that Id to bring indepth infromation
 function rottenSearchQuery(searchQuery){				
 	var rottenQuery = "http://api.rottentomatoes.com/api/public/v1.0/movies.jsonp?apikey="+ tomatoeKey+ "&q=" +searchQuery + "&page_limit=30";
 	$.ajax({
@@ -90,12 +59,12 @@ function rottenSearchQuery(searchQuery){
 			console.log("error");
 		}
 	});
-  
 }
 
+//using the value="moiveID" from the div on the search page. 
 function rottenSearchQueryWithID(movieID){	
 	$.ajax({
-		'url': "http://api.rottentomatoes.com/api/public/v1.0/movies/770672122.jsonp?apikey="+ tomatoeKey,
+		'url': "http://api.rottentomatoes.com/api/public/v1.0/movies/"+ movieID +".jsonp?apikey="+ tomatoeKey,
 		'type': 'GET',
 		'dataType': "jsonp",
 		success: function(data, textStats, XMLHttpRequest) {	
@@ -113,6 +82,28 @@ function rottenSearchQueryWithID(movieID){
 	});
   
 }
+
+//calling movie DB to get a high res image for the profile page
+function searchQuery(searchQuery){
+	console.log(searchQuery);
+	$.ajax({
+		
+		'url': "https://api.themoviedb.org/3/search/movie?api_key=d1d7ccec36948efe0fe4750abc77836f&query=" + searchQuery,
+		'type': 'GET',
+		'dataType': "json",
+		success: function(data, textStats, XMLHttpRequest) {
+			// imageLinkPrinter(data);
+			console.log(data);
+
+		},
+		error: function(data, textStatus, errorThrown) {
+			console.log("error");
+		}
+	});
+  
+}
+
+
 
 //get movie revies and simmilar movies for the profile page
 function rotten_similar_reviews(similar , reviews){
@@ -283,32 +274,9 @@ function imageLinkPrinter(imageLink){
 })()
 
 
-
-function searchQuery(searchQuery){
-	console.log(searchQuery);
-	$.ajax({
-		
-		'url': "https://api.themoviedb.org/3/search/movie?api_key=d1d7ccec36948efe0fe4750abc77836f&query=" + searchQuery,
-		'type': 'GET',
-		'dataType': "json",
-		success: function(data, textStats, XMLHttpRequest) {
-			imageLinkPrinter(data);
-			console.log(data);
-		},
-		error: function(data, textStatus, errorThrown) {
-			console.log("error");
-		}
-	});
-  
-}
-
-
-
 function rottenDataforSpecificMovie(data){
 	console.log(data);
 	var title = data["title"];
-
-
 }
 
 function imageLinkPrinter(imageLink){
@@ -359,3 +327,49 @@ function printBoxOffice(data){
 	};
 }
 
+
+function imdb(searchString){
+	console.log(searchString);
+	var imdbRequest = "http://www.omdbapi.com/?t="+ searcharchString +"&y=&plot=full&r=jsonp"
+	$.ajax({
+			'url': imdbRequest,
+			'type': 'GET',
+			'dataType': "jsonp",
+			success: function(data, textStats, XMLHttpRequest) {	
+				console.log(data);
+			},
+			error: function(data, textStatus, errorThrown) {
+				console.log("error");
+			}
+		});
+}
+
+
+
+//list of BoxOffice movies from rotten tomatoes
+function rottenBoxOffice(){	
+	$.ajax({
+		'url': "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey="+ tomatoeKey,
+		'type': 'GET',
+		'dataType': "jsonp",
+		success: function(data, textStats, XMLHttpRequest) {				
+			printBoxOffice(data);
+		},
+		error: function(data, textStatus, errorThrown) {
+			console.log("error");
+		}
+	});
+  
+}
+
+
+$('#container').freetile();
+
+$('#container').freetile({
+    animate: true,
+    elementDelay: 30
+});
+
+$('#container').freetile({
+    selector: '.thumbs'
+});

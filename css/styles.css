@@ -172,11 +172,12 @@
 	border-width: 1px;
 	border-color: black;
 	color:black;
+	padding:1px 10px 1px 10px;
 }
+/*
 .movie-reviews{
-	overflow-y: scroll;
-	height:500px;
-}
+
+}*/
 
 .poster img{
 	height: 300px; 
@@ -185,6 +186,8 @@
 }
 
 .movie-reviews{
+		overflow-y: scroll;
+	height:500px;
 	color:black;
 	padding:1px 10px 1px 10px;
 	font: Serif

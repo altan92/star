@@ -1,4 +1,3 @@
-
 .body-style{
 	background-color: #E6E6E6;
 }
@@ -29,14 +28,14 @@
 .related{
 	 background-color: white;
 	 border: solid;
-	 width: 23%;
+	 width: 300px;
 	 float: right;
 	 position:fixed;
-	 margin-left: 920px;
+	 margin-left: 900px;
 	 padding: 5px;
 	 border-radius: 10px;
 	 /*overflow-y: scroll;*/
-	/* height:615px;*/
+	 height:615px;
 	 /*min-height: 615px;*/
 }
 
@@ -149,32 +148,46 @@
 
 .info{
 	height:300px;
-	width:100%;
+	/*width:100%;*/
+	width:836px;
 	border: solid;	
 	border-width: 1px;
 	border-color: black;
 }
 
 .synopsis{
-	height:300px;
-	width:100%;
+	/*height:300px;*/
+	/*width:100%;*/
+	width:836px;
 	border: solid;	
 	border-width: 1px;
 	border-color: black;
+	padding:1px 10px 1px 10px;
 }
-
-.movie-reviews{
-	height:100px;
-	width:100%;
+.movie-reviews1{
+	/*height:300px;*/
+	/*width:100%;*/
+	width:836px;
 	border: solid;	
 	border-width: 1px;
 	border-color: black;
+	color:black;
+}
+.movie-reviews{
+	overflow-y: scroll;
+	height:500px;
 }
 
 .poster img{
 	height: 300px; 
 	width: 200px;
 	vertical-align:middle;
+}
+
+.movie-reviews{
+	color:black;
+	padding:1px 10px 1px 10px;
+	font: Serif
 }
 
 .poster {
@@ -238,12 +251,12 @@
 .audience{
 	float:left;
 	border-right: 1px solid;
-	width:32%;
+	width:36%;
 	margin-left: 7px;
 }
 .critic{
 	float:right;
-	margin-right: 350px;
+	margin-right: 270px;
 }
 
 .actors table{
@@ -263,7 +276,13 @@
 	font-size: 13px;
 }
 
+.synopsis p{
+	color:black;
+}
 
-
+#watch_more{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
 
 

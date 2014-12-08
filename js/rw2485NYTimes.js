@@ -1,5 +1,5 @@
 
-/* The new times Articles Api provides large images for movies we dont actuall
+/* The new times Articles Api provides large images for movies ` dont actuall
 y need to query the movie database. I have added console logs for all
 the relevent data */
 
@@ -20,6 +20,7 @@ $(document).ready(function(){
 		'type': 'GET',
 		'dataType': "json",
 		success: function(data, textStats, XMLHttpRequest) {
+
 			imageLinkPrinter(data);
 			console.log(data);
 		},
@@ -127,12 +128,20 @@ function imageLinkPrinter(imageLink){
 	
 	
 	for(var i = 0; i < imageLink.results.length; i++){
+
+		
 		var first_photo = imageLink.results[i];
 		first_photo["poster_path"]= "https://image.tmdb.org/t/p/original" + first_photo["poster_path"];
 		var images = ich.images(first_photo);
 		$('#images').append(images);
-		$("[data-toggle=popover]").popover();
-		//console.log(imageLink.results[i]);
+		if (((i+1) % 5) == 0){
+			//$("[data-toggle=popover]").popover({trigger:"hover", container: $(this), placement:"left"});
+			$(".pop").popover({trigger:"hover", container: 'body', placement:"left"});
+		} else {
+			//$("[data-toggle=popover]").popover({trigger:"hover", container: $(this)});
+			$(".pop").popover({trigger:"hover",container: 'body'});
+		}
+		console.log(imageLink.results[i]);
 		//console.log(imageLink.results[i].backdrop_path);
 	}
 

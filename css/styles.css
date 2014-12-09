@@ -132,6 +132,7 @@
 
 .related-article{
 	/*border-top: 1px solid black;*/
+	box-shadow: 5px 5px 5px #888888;
 	padding: 5px;
 }
 
@@ -393,11 +394,13 @@
 	margin-top:-30px;
 	background-color:#E6E6E6;
 
-}
+}/*
 .carousel-caption {
     background-color: #fff;
     background-color: rgba(150,150,150,0.5);
-}
+	box-shadow: 10px 10px 5px #888888;    
+
+}*/
 .video{
 	height:500px;
 	width:100%;
@@ -449,3 +452,5 @@
 	color: black;
 	font-size: 18px;
 }
+
+

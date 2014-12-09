@@ -38,7 +38,7 @@ $(document).ready(function(){
 
 	});
 
-	$(document).on("click",".fa-minus-circle",function(){
+	$(document).on("click",".fa-times",function(){
 		var movie = this.id.split('@');
 		var name = movie[0];
 		console.log(name);
@@ -100,7 +100,7 @@ function newMovieOnList(name, imgurl,id){
                       '</div>'+
                        '<div class="menu-movie-name" onclick="location.href=\'profile.html?movie='+name.replace('\'','').replace('\"','').split(" ").join("+")+'/'+id+'\';">'+name+'</div>'+
                        '<div class="menu-remove-icon">'+
-                        '<i class="fa fa-minus-circle"id="'+name+'@'+imgurl+'"></i></div>'+
+                        '<i class="fa fa-times"id="'+name+'@'+imgurl+'"></i></div>'+
                         '</div>'+
                  '</li>'
     return inner;

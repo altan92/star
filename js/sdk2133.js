@@ -28,12 +28,21 @@ $(document).ready(function(){
 		var movie = this.id.split('@');
 		var name = movie[0];
 		var imageurl = movie[1];
-		var rating = movie[2];
 
-		addMovie(watchlist,name,imageurl,rating);
-		$('.dropdown-menu').prepend(newMovieOnList(name,imageurl));
+		if(addMovie(watchlist,name,imageurl)){
+			$('.dropdown-menu').prepend(newMovieOnList(name,imageurl));
+		}
 
 	});
+
+	$(document).on("click",".fa-minus-circle",function(){
+		var movie = this.id.split('@');
+		var name = movie[0];
+		console.log(name);
+		removeMovie(watchlist,name);
+		$(this).parents("a").remove();
+	});
+
 });
 
 // adds movie to the watch list
@@ -44,7 +53,9 @@ function addMovie(watchlist,name, imageurl){
 		currentlist = watchlist.movielist;
 		currentlist[currentlist.length] = newmovie;
 		localStorage.setItem("watchlist", JSON.stringify(watchlist));
+		return true;
 	}
+	return false;
 }
 
 // remove food from the list
@@ -80,12 +91,14 @@ function findMovie(watchlist,name){
 function newMovieOnList(name, imgurl){
 
 	var inner = '<li>'+
-				'<a href="">'+
+				'<a>'+
                      '<div class= "menu-watch-list">'+
                      '<div class="menu-movie-img">'+
                         '<img src= "'+imgurl+'" style="width:60px;height:50px">'+
                       '</div>'+
                        '<div class="menu-movie-name">'+name+'</div>'+
+                       '<div class="menu-remove-icon">'+
+                        '<i class="fa fa-minus-circle"id="'+name+'@'+imgurl+'"></i></div>'+
                         '</div>'+
                  '</a>'+
                  '</li>'

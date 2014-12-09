@@ -301,20 +301,7 @@
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
-.related_movies{
-	 background-color: white;
-	 border: solid;
-	 width: 338px;
-	 float: right;
-	 position:fixed;
-	 margin-left: 893px;
-	 padding: 1px;
-	 border-radius: 10px;
-	 /*overflow-y: scroll;*/
-	 height:321px;
-	 margin-top: -5px;
-	 /*min-height: 615px;*/
-}
+
 .all_related_movies{
 	height: 250px;
 	overflow-y: scroll;
@@ -350,23 +337,28 @@
 .related_profile{
 	 background-color: white;
 	 border: solid;
-	 width: 338px;
+	 width: 238px;
 	 float: right;
-	 position:fixed;
-	 margin-left: 893px;
-	 padding: 1px;
-	 border-radius: 10px;
-	 /*overflow-y: scroll;*/
-	 height:321px;
-	 margin-top: 320px;
-	 /*min-height: 615px;*/
+	 height:560px;
+	 margin-top: 560px;
+	 margin-right: -238px;
+}
+.related_movies{
+	 background-color: white;
+	 border: solid;
+	 width: 238px;
+	 float: right;
+	 margin-right: 110px;
+	 height:560px;
+	 margin-top: 0px;
 }
 .all_related_profile{
 	height: 250px;
 	overflow-y: scroll;
 }
 .prof_body{
-	margin-top:-30px
+	margin-top:-30px;
+	margin-left:30px;
 }
 
 .carousel-caption {

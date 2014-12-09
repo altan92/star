@@ -90,8 +90,11 @@
 }
 
 .cs-style-1 figcaption h3 {
-	margin-top: 70px;
+	margin-top: 10px;
+	font:18px Serif;
 	opacity:1;
+	margin-left: -5px;
+	margin-right: -5px;
 }
 
 .cs-style-1 figcaption span {

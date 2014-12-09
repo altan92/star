@@ -39,6 +39,9 @@
     <link rel="stylesheet" type="text/css" href="../css/styles.css" />
         <script src="../js/modernizr.custom.js"></script>
 
+    <script type="text/javascript" src="../js/sdk2133.js"></script>
+
+
     
     
 </head>
@@ -72,15 +75,38 @@
                     <li>
                         <a class="page-scroll" href="#about">About</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#team">Team</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                    <li>
-                        <a href="help.html?lightbox[iframe]=true&lightbox[width]=90p&lightbox[height]=96p" class="page-scroll lightbox">Help page</a>
-                    </li>
+
+                    <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-video-camera"></i>
+                        <span>WatchList</span>
+                         <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href='#'>
+                                <div class= "menu-watch-list">
+                                    <div class="menu-movie-img">
+                                    <img src= 'https://image.tmdb.org/t/p/original/coss7RgL0NH6g4fC2s5atvf3dFO.jpg'style="width:60px;height:50px">
+                                    </div>
+                                <div class="menu-movie-name"> The Hunger Games</div>
+                           </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>Read All Messages</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
+                <li>
+                        <a href="help.html?lightbox[iframe]=true&lightbox[width]=90p&lightbox[height]=96p" class="page-scroll lightbox">
+                            <i class="fa fa-question-circle"></i>
+                        </a>
+                </li>
                 </ul>
             </div>
         </div>
@@ -90,8 +116,8 @@
     
 <!--Video Section-->
 
- <div class="video">
-    <iframe frameborder="20" height="500px" width="100%" allowtransparency="true"  src="https://youtube.com/embed/3PkkHsuMrho?autoplay=0&controls=1&showinfo=0&autohide=1" seamless="seamless" >
+ <div class="video" >
+    <iframe frameborder="" height="500px" width="100%" allowtransparency="true"  src="https://youtube.com/embed/3PkkHsuMrho?autoplay=0&controls=1&showinfo=0&autohide=1" seamless="seamless" >
     </iframe>
   
 </div>
@@ -248,7 +274,10 @@
                     </div>
                     <div class="links">
                         <hr>
-                        <a id="watch_more" class="pure-button" href="#">Add to watch list!</a>
+                        <span class="add-to-list" id="The Hunger Games@https://image.tmdb.org/t/p/original/coss7RgL0NH6g4fC2s5atvf3dFO.jpg">
+                        <div id="watch_more" class="pure-button" href="#">Add to watch list!</div>
+
+                        </span>
                         <a id="watch_more" class="pure-button" href="#">See trailers!</a>
                         <!-- <a class="pure-button" href="#">A Pure Button</a>
                         <a class="pure-button" href="#">A Pure Button</a>

@@ -364,3 +364,8 @@
 .prof_body{
 	margin-top:100px
 }
+
+.carousel-caption {
+    background-color: #fff;
+    background-color: rgba(150,150,150,0.5);
+}

@@ -63,19 +63,19 @@
                         <a href="#page-top"></a>
                     </li>
                     
-                 <div class="col-lg-2">
+             <div class="col-lg-2">
                        <form action="search.html" method="get">
-                            <div class="input-group" style="margin-top:5px;width:450px;margin-left:-320px;">
-                               
-                              
-                                <input type="text" class="form-control" placeholder="Search">
-                                <span class="input-group-btn">
-                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                        </form>
+                        <div class="input-group" style="margin-top:5px;width:450px;margin-left:-320px;">
+                           
+                          
+                            <input id="movie" name="movie" type="text" class="form-control" placeholder="Search">
+                            <span class="input-group-btn">
+                            <button class="btn btn-default" type="button submit" value="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
     
                         </div><!-- /input-group -->
+                    </form>
   
-                     </div><!-- /.col-lg-6 --> 
+                     </div><!-- /.col-lg-6 -->   
 
                     
                     <li>
@@ -272,7 +272,10 @@
                        </div>
                         <div class="panel-body">
                             <h1 class="snippet">{{{snippet}}}</h1>
-                            <a href="{{web_url}}?lightbox[iframe]=true&lightbox[width]=90p&lightbox[height]=96p" class="page-scroll lightbox" id="prof-related-article"><button class="btn-custom search-btn">See article</a>
+                          
+                            <a href="{{web_url}}?lightbox[iframe]=true&lightbox[width]=90p&lightbox[height]=96p" class="page-scroll lightbox" id="prof-related-article"><button class="btn btn-primary btn-warning"><span class="glyphicon glyphicon-film"></span> See article</a>
+
+                          
                         </div>
                     </div>  
                    

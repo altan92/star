@@ -525,7 +525,7 @@
                 
                     <figure class="pop"  data-html="true" data-toggle="popover" title="<a class='hovercolor' href='profile.html?movie={{query}}'>{{title}}</a>" data-content="<p>{{overview}}<a class='readmore' href='profile.html?movie={{query}}'>Read More</a></p><hr>{{button}}<div class='rating'>{{rating}}</div>">
                         <img src={{poster_path}}>
-
+                        <a class='clickImage' href='profile.html?movie={{query}}'><img src={{poster_path}}></a>
                         <figcaption>
                             <span class="tit">{{title}}</span>
                             <span id='rating'>{{{rating}}}</span>
@@ -545,13 +545,18 @@
     <!-- appends information to critic picture -->
     <script id="critic"  type="text/html">
         <li class={{timeline}}>
+
             <div class="timeline-image">
                 <img class="img-circle img-responsive image" src={{picture}} alt="">
             </div>
             <div class="timeline-panel">
                 <div class="timeline-heading">
-                    <h4>2009-2011</h4>
-                    <h4 class="subheading">{{display_title}}</h4>
+
+                    <a href='profile.html?movie={{display_title}}'>
+                    <h2>{{display_title}}</h2>
+                    <h4 class="subheading">{{byline}}</h4></a>
+                    
+                    
                 </div>
                 <div class="timeline-body">
                     <p class="text-muted">{{summary_short}}}</p>

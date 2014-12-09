@@ -100,7 +100,7 @@ function newMovieOnList(name, imgurl,id){
                       '</div>'+
                        '<div class="menu-movie-name" onclick="location.href=\'profile.html?movie='+name.split(" ").join("+")+'/'+id+'\';">'+name+'</div>'+
                        '<div class="menu-remove-icon">'+
-                        '<i class="fa fa-minus-circle"id="'+name+'@'+imgurl+'"></i></div>'+
+                        '<i class="fa fa-times"id="'+name+'@'+imgurl+'"></i></div>'+
                         '</div>'+
                  '</li>'
     return inner;

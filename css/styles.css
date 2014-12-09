@@ -140,10 +140,24 @@
 	height: 100px;
 	overflow-y: scroll;
 }
+
+.movie_desc{
+	color:black;
+	font:italic 14px Serif;
+	text-align: left;
+	height: 120px;
+	overflow-y: scroll;
+	/*border: 1px solid black;*/
+	padding:10px;
+}
+
 #related-article{
 	color:blue;
 	text-align: center;
 	margin-left: 61px;
+}
+#prof-related-article{
+	color:black;
 }
 
 .info{
@@ -186,7 +200,7 @@
 }
 
 .movie-reviews{
-		overflow-y: scroll;
+	overflow-y: scroll;
 	height:500px;
 	color:black;
 	padding:1px 10px 1px 10px;
@@ -200,7 +214,7 @@
 }
 
 #info_body{
-	margin-top: 100px;
+	margin-top: 60px;
 	margin-right: 50px;
 	margin-left: 50px;
 	width:75%;
@@ -287,5 +301,66 @@
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
+.related_movies{
+	 background-color: white;
+	 border: solid;
+	 width: 338px;
+	 float: right;
+	 position:fixed;
+	 margin-left: 893px;
+	 padding: 1px;
+	 border-radius: 10px;
+	 /*overflow-y: scroll;*/
+	 height:321px;
+	 margin-top: -5px;
+	 /*min-height: 615px;*/
+}
+.all_related_movies{
+	height: 250px;
+	overflow-y: scroll;
+}
+.movie-btn{
+	margin-left: 100px;
+}
+.article-btn{
+	margin-left: 100px;
+	text-align: left;
+}
+.btn-custom {
+  background-color: hsl(209, 100%, 72%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d6ebfe", endColorstr="#70b9ff");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#d6ebfe), to(#70b9ff));
+  background-image: -moz-linear-gradient(top, #d6ebfe, #70b9ff);
+  background-image: -ms-linear-gradient(top, #d6ebfe, #70b9ff);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d6ebfe), color-stop(100%, #70b9ff));
+  background-image: -webkit-linear-gradient(top, #d6ebfe, #70b9ff);
+  background-image: -o-linear-gradient(top, #d6ebfe, #70b9ff);
+  background-image: linear-gradient(#d6ebfe, #70b9ff);
+  border-color: #70b9ff #70b9ff hsl(209, 100%, 67%);
+  color: #333 !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.33);
+  -webkit-font-smoothing: antialiased;
+}
 
-
+.related_profile{
+	 background-color: white;
+	 border: solid;
+	 width: 338px;
+	 float: right;
+	 position:fixed;
+	 margin-left: 893px;
+	 padding: 1px;
+	 border-radius: 10px;
+	 /*overflow-y: scroll;*/
+	 height:321px;
+	 margin-top: 320px;
+	 /*min-height: 615px;*/
+}
+.all_related_profile{
+	height: 250px;
+	overflow-y: scroll;
+}
+.prof_body{
+	margin-top:100px
+}

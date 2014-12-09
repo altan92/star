@@ -91,10 +91,10 @@ function findMovie(watchlist,name){
 function newMovieOnList(name, imgurl){
 
 	var inner = '<li>'+
-				'<a>'+
+				'<a href="profile.html?movie='+name.split(" ").join("+")+'">'+
                      '<div class= "menu-watch-list">'+
                      '<div class="menu-movie-img">'+
-                        '<img src= "'+imgurl+'>'+
+                        '<img src= "'+imgurl+'">'+
                       '</div>'+
                        '<div class="menu-movie-name">'+name+'</div>'+
                        '<div class="menu-remove-icon">'+

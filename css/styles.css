@@ -132,6 +132,7 @@
 
 .related-article{
 	/*border-top: 1px solid black;*/
+	box-shadow: 5px 5px 5px #888888;
 	padding: 5px;
 }
 
@@ -393,11 +394,13 @@
 	margin-top:-30px;
 	background-color:#E6E6E6;
 
-}
+}/*
 .carousel-caption {
     background-color: #fff;
     background-color: rgba(150,150,150,0.5);
-}
+	box-shadow: 10px 10px 5px #888888;    
+
+}*/
 .video{
 	height:500px;
 	width:100%;
@@ -410,12 +413,17 @@
 .watchlist{
 	max-height:350px;
 	overflow-y:scroll; 
+	width: 420px;
 }
 /* Style for watch later list*/
 .menu-watch-list{
 	height: 80px;
 	border: solid;
 	color: black;
+
+}
+.menu-watch-list:hover { 
+  background-color: rgba(0, 0, 0, 0.1);
 
 }
 .menu-movie-img{
@@ -431,6 +439,7 @@
 
 
 .menu-movie-name{
+	width: 50%;
 	float: left;
 	margin-top: 15px;
 	margin-left: 10px;
@@ -438,7 +447,14 @@
 }
 .menu-remove-icon{
 	float: left;
-	margin-top: 15px;
-	margin-left: 10px;
+	margin-top: 25px;
+	margin-left: 8px;
 	color: black;
+	font-size: 18px;
 }
+
+.caption1 {
+	margin-left: -138px;
+	margin-right:32%;
+}
+

@@ -38,7 +38,7 @@ $(document).ready(function(){
 
 	});
 
-	$(document).on("click",".fa-minus-circle",function(){
+	$(document).on("click",".fa-times",function(){
 		var movie = this.id.split('@');
 		var name = movie[0];
 		console.log(name);

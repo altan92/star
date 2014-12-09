@@ -62,7 +62,7 @@ $(document).ready(function(){
 					}
 					var button = '<span class="add-to-list" id="'+response["title"]+'@'+response["backdrop_path"]+'">';
         			button = button + '<div id="watch_more" class="pure-button btn-custom" href="#">Add to watch list!</div></span>';
-        			console.log(button);
+        			
         			response["button"] = button;
 					response["cast"] = cast;
 					response["audience_rating"] = output.ratings.audience_rating;
@@ -83,6 +83,26 @@ $(document).ready(function(){
 
 			
 			
+		},
+		error: function(data, textStatus, errorThrown) {
+			console.log("error");
+		}
+	});
+	var moviesUrl = "http://api.nytimes.com/svc/movies/v2/reviews/search.jsonp?query=" + movie +"&api-key=";
+ 	$.ajax({
+		'url': moviesUrl+"a0d0c0d77f5bd871613018e23c2d4d85:8:70159037",
+		'type': 'GET',
+		'dataType': "jsonp",
+		success: function(data, textStats, XMLHttpRequest) {
+			console.log(data);
+			for (var i = 0; i < data.results.length ;i++) {
+				
+				var first_review = data.results[i];
+				
+				var reviews = ich.nytreviews(first_review);
+				$("#nytreviews").append(reviews);
+			}
+		
 		},
 		error: function(data, textStatus, errorThrown) {
 			console.log("error");

@@ -236,8 +236,17 @@
 }
 
 .title h1{
+	padding-top: 1%;
+	margin-top: 0%;
+	width: 100%;
+	background-color: #fed136;
 	color:black;
 	font:20px Serif;
+	height: 40px;
+	box-shadow: 2px 2px 2px gray;
+	padding-left: 10px;
+	margin-left:14px;
+	font-weight: 700;
 }
 
 .rate img{

@@ -234,7 +234,7 @@
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="../js/classie.js"></script>
-    <script src="../js/rw2485.js"></script>
+    <!--<script src="../js/rw2485.js"></script>-->
     <script id="video" type="text/html">
         
          <iframe frameborder="" height="500px" width="100%" allowtransparency="true"  src={{movietrailer}} seamless="seamless" >
@@ -264,10 +264,10 @@
                         <td><b>Released in theater:</b> {{release_date}}</td>
                     </tr>
                     <tr>
-                        <td><b>Director:</b> Gary Ross</td>
+                        <td><b>Genres:</b> {{genre}}</td>
                     </tr>
                     <tr>
-                        <td><b>Cast:</b> Edward Asner, Christopher Plummer, Jphn Ratzenberger, Bob Peterson, and Jordan Nagai</td>
+                        <td><b>Cast:</b> {{cast}}</td>
                     </tr>
                     
                 </table>
@@ -280,14 +280,14 @@
                                 <div class="rate">
                                     <img src= '../img/star.png'>
                                     <!-- <img src= 'http://www.clker.com/cliparts/f/9/8/1/1216181106356570529jean_victor_balin_icon_star.svg.med.png'> -->
-                                    <h1>76</h1>
+                                    <h1>{{audience_score}}</h1>
                                     <div class="information">
                                         <table>
                                             <tr>
-                                                <td><b>Audience rating:</b> Upright</td>
+                                                <td><b>Audience rating:</b> {{audience_rating}}</td>
                                             </tr>
                                             <tr>
-                                                <td><b>Audience score:</b> 76/100</td>
+                                                <td><b>Audience score:</b> {{audience_score}}/100</td>
                                             </tr>
                                         </table>
                                     </div>
@@ -300,14 +300,14 @@
                              <div class="rate">
                                 <img src= '../img/star.png'>
                                 <!-- <img src= 'http://www.clker.com/cliparts/f/9/8/1/1216181106356570529jean_victor_balin_icon_star.svg.med.png'> -->
-                                <h1>65</h1>
+                                <h1>{{critics_score}}</h1>
                                 <div class="information">
                                     <table>
                                         <tr>
-                                            <td><b>Critic rating:</b> Fresh</td>
+                                            <td><b>Critic rating:</b> {{critics_rating}}</td>
                                         </tr>
                                         <tr>
-                                            <td><b>Critic score:</b> 65/100</td>
+                                            <td><b>Critic score:</b> {{critics_score}}/100</td>
                                         </tr>
                                     </table>
                                 </div>
@@ -316,11 +316,8 @@
                     </div>
                     <div class="links">
                         <hr>
-                        <span class="add-to-list" id="The Hunger Games@https://image.tmdb.org/t/p/original/coss7RgL0NH6g4fC2s5atvf3dFO.jpg">
-                        <div id="watch_more" class="pure-button" href="#">Add to watch list!</div>
-
-                        </span>
-                        <a id="watch_more" class="pure-button" href="#">See trailers!</a>
+                       {{{button}}}
+                        
                         <!-- <a class="pure-button" href="#">A Pure Button</a>
                         <a class="pure-button" href="#">A Pure Button</a>
                         <a class="pure-button" href="#">A Pure Button</a> -->

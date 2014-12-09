@@ -29,8 +29,18 @@ $(document).ready(function(){
 		'type': 'GET',
 		'dataType': "json",
 		success: function(data, textStats, XMLHttpRequest) {
-
+			
 			var response = data; 
+			var genre="";
+			for (var i = 0; i < response.genres.length ;i++) {
+				if(i==(response.genres.length-1)){
+					genre = genre + 'and ' + response.genres[i].name;
+					break;
+				}
+				genre = genre + response.genres[i].name + ', ';
+
+			}
+			response['genre'] = genre;
 			response["poster_path"]= "https://image.tmdb.org/t/p/original" + response["poster_path"];
 			$.ajax({
 				'url': "http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=bx8uz4gdtrn2kx87czmpby74&q=" + movie + "&page_limit=1",
@@ -39,6 +49,26 @@ $(document).ready(function(){
 				success: function(data, textStats, XMLHttpRequest) {	
 					console.log(data);
 					output = data.movies[0];
+					var cast ="";
+					for (var i = 0; i < output.abridged_cast.length ;i++) {
+						console.log(output.abridged_cast[i]);
+						if(i==(output.abridged_cast.length-1)){
+
+							cast = cast + 'and ' + output.abridged_cast[i].name;
+							break;
+						}
+						cast = cast + output.abridged_cast[i].name + ', ';
+
+					}
+					var button = '<span class="add-to-list" id="'+response["title"]+'@'+response["backdrop_path"]+'">';
+        			button = button + '<div id="watch_more" class="pure-button btn-custom" href="#">Add to watch list!</div></span>';
+        			console.log(button);
+        			response["button"] = button;
+					response["cast"] = cast;
+					response["audience_rating"] = output.ratings.audience_rating;
+					response["audience_score"] = output.ratings.audience_score;
+					response["critics_rating"] = output.ratings.critics_rating;
+					response["critics_score"] = output.ratings.critics_score;
 					response["mpaa_rating"] = output.mpaa_rating;
 					var movies = ich.movieinfo(response);
 					$("#movieinfo").append(movies);

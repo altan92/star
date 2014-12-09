@@ -34,11 +34,13 @@
     <!-- Grid box files -->
     <link rel="stylesheet" type="text/css" href="../css/default.css" />
     <link rel="stylesheet" type="text/css" href="../css/component.css" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery.carousel.fullscreen.css" />
+    
         <script src="../js/modernizr.custom.js"></script>
 </head>
 
 <body id="page-top" class="index">
-
+   
     <!-- Navigation -->
    
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -98,6 +100,56 @@
                     <li>
                         <a href="help.html?lightbox[iframe]=true&lightbox[width]=90p&lightbox[height]=96p" class="page-scroll lightbox">Help page</a>
                     </li>
+                    <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>Read All Messages</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
 
                 </ul>
             </div>
@@ -108,17 +160,41 @@
     </nav>
 
 
+
+
+
     <!-- Header -->
     <header>
-        <div class="container">
-            <div class="intro-text">
-                <div class="intro-lead-in">Welcome To Our Studio!</div>
-                
-                <div class="intro-heading">It's Nice To Meet You</div>
-                <a href="#tiles" class="page-scroll btn btn-xl">Tell Me More</a>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="../img/bg_01.jpg" alt="" />
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Bootstrap Carousel Fullscreen</h1>
+                        <p class="lead">Just turns the Twitter Bootstrap Carousel in fullscreen mode, and scale to fit the screen resolution</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </header>
+
+            <div class="item">
+                <img src="../img/bg_02.jpg" alt="" />
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Bootstrap Carousel Fullscreen</h1>
+                        <p class="lead">Just turns the Twitter Bootstrap Carousel in fullscreen mode, and scale to fit the screen resolution</p>
+                    </div>
+                </div>
+            </div>
+        </div></header>
 
     <div id="tiles">
     <div class="container">
@@ -703,6 +779,7 @@
     <!-- Custom Theme JavaScript -->
     <script src="../js/agency.js"></script>
     <script src="../js/rw2485NYTimes.js"></script>
+    <script src="../js/rw2485.js"></script>
 
     <!--  <script type="text/javascript" src="../lightbox/jquery.lightbox.min.js"></script>
  -->

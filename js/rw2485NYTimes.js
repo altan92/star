@@ -278,8 +278,13 @@ function append(first_photo, i){
 		// console.log(first_photo["overview"] = first_photo["overview"].split("."));
 		first_photo["overview"] = first_photo["overview"].split(" ").slice(0,30).join(" ");
 		first_photo["overview"] = first_photo["overview"] + ".... "
-		first_photo["button"] = "<button class=\"btn-custom \" onclick=\"window.location.href='#test';\">Add to Watch List</button>"
+		// first_photo["button"] = "<button class=\"btn-custom \" onclick=\"window.location.href='#test';\">Add to Watch List</button>"
 		// first_photo[""]
+		var button = '<span class="add-to-list" id="'+first_photo["title"]+'@'+first_photo["poster_path"]+'">';
+        button = button + '<div class="pure-button" href="#">Add to watch list!</div></span>';
+        first_photo["button"] = button;
+
+
 		first_photo['title']=parseTitle(first_photo['title']);
 		if(first_photo["tagline"]==""){
 			first_photo["tagline"] = "Love is a friendship set to music";

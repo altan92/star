@@ -17,7 +17,6 @@ $(document).ready(function(){
 		var currentlist = watchlist.movielist;
 		var name;
 		var imgurl;
-		alert("hello")
 		for (var i = currentlist.length-1; i >= 0; i--) {
 			name=currentlist[i].name
 			imgurl=currentlist[i].imageurl
@@ -38,10 +37,10 @@ $(document).ready(function(){
 });
 
 // adds movie to the watch list
-function addMovie(watchlist,name, imageurl, rating){
+function addMovie(watchlist,name, imageurl){
 
 	if(!findMovie(watchlist,name)){
-		var newmovie = {"name":name,"imageurl":imageurl,"rating":rating};
+		var newmovie = {"name":name,"imageurl":imageurl};
 		currentlist = watchlist.movielist;
 		currentlist[currentlist.length] = newmovie;
 		localStorage.setItem("watchlist", JSON.stringify(watchlist));

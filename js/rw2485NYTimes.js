@@ -272,7 +272,7 @@ function append(first_photo, i){
 		first_photo["overview"] = first_photo["overview"].split(" ").slice(0,30).join(" ");
 		first_photo["overview"] = first_photo["overview"] + ".... "
 		var button = '<span class="add-to-list" id="'+first_photo["title"]+'@'+first_photo["backdrop_path"]+'@'+first_photo["id"]+'">';
-        button = button + '<div class="pure-button btn-custom" href="#">Add to watch list!</div></span>';
+        button = button + '<div class="pure-button btn-custom" href="#">Add to watch list!</div></span><div id="newalert"></div>';
         first_photo["button"] = button;
 		first_photo['title']=parseTitle(first_photo['title']);
 		var query = first_photo['title'].replace('\'','').replace('\"','').split(" ").join("+");

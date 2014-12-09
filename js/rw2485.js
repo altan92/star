@@ -388,8 +388,4 @@ jQuery(document).ready(function() {
 
 
 
-$('document').ready(function() {
-    var options = { videoId: '3PkkHsuMrho', start: 3 };
-    $('#youtube').tubular(options);
-});
 

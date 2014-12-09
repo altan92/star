@@ -124,7 +124,7 @@
 }
 
 .related-article{
-	border-top: 1px solid black;
+	/*border-top: 1px solid black;*/
 	padding: 5px;
 }
 
@@ -164,29 +164,32 @@
 	height:300px;
 	/*width:100%;*/
 	width:836px;
-	border: solid;	
-	border-width: 1px;
-	border-color: black;
+	/*border: solid;	*/
+	/*border-width: 1px;*/
+	/*border-color: black;*/
+	background-color: white
 }
 
 .synopsis{
 	/*height:300px;*/
 	/*width:100%;*/
 	width:836px;
-	border: solid;	
-	border-width: 1px;
-	border-color: black;
+	/*border: solid;	*/
+	/*border-width: 1px;*/
+	/*border-color: black;*/
 	padding:1px 10px 1px 10px;
+	background-color: white;
 }
 .movie-reviews1{
 	/*height:300px;*/
 	/*width:100%;*/
 	width:836px;
-	border: solid;	
-	border-width: 1px;
-	border-color: black;
+	/*border: solid;	*/
+	/*border-width: 1px;*/
+	/*border-color: black;*/
 	color:black;
 	padding:1px 10px 1px 10px;
+	background-color: white;
 }
 /*
 .movie-reviews{
@@ -348,6 +351,7 @@
 }
 
 .related_profile{
+	border-radius: 10px;
 	 background-color: white;
 	 border: solid;
 	 width: 338px;
@@ -362,13 +366,20 @@
 	 /*min-height: 615px;*/
 }
 .all_related_profile{
+	border-radius: 10px;
 	height: 250px;
 	overflow-y: scroll;
 }
 .prof_body{
-	margin-top:-30px
+	border-radius: 10px;
+	margin-top:-30px;
+	background-color:#BDBDBD;
 }
 
+#profile{
+	margin-top:-30px;
+	background-color:#BDBDBD;
+}
 .carousel-caption {
     background-color: #fff;
     background-color: rgba(150,150,150,0.5);
@@ -376,6 +387,7 @@
 .video{
 	height:500px;
 	width:100%;
-	    white-space:nowrap;
-    overflow:hidden;
+	/*background-color: rgba(150,150,150,0.9);*/
+	/*white-space:nowrap;*/
+    /*overflow:hidden;*/
 }

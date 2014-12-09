@@ -275,7 +275,7 @@ function append(first_photo, i){
         button = button + '<div class="pure-button btn-custom" href="#">Add to watch list!</div></span>';
         first_photo["button"] = button;
 		first_photo['title']=parseTitle(first_photo['title']);
-		var query = first_photo['title'].split(" ").join("+");
+		var query = first_photo['title'].replace('\'','').replace('\"','').split(" ").join("+");
 		query = query.substring(0, query.length - 1);
 
 		first_photo['query'] = query + '/' + first_photo['id'];

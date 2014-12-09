@@ -95,10 +95,10 @@ function newMovieOnList(name, imgurl,id){
 
 	var inner = '<li>'+
                      '<div class="menu-watch-list">'+
-                     '<div class="menu-movie-img" onclick="location.href=\'profile.html?movie='+name.split(" ").join("+")+'/'+id+'\';">'+
+                     '<div class="menu-movie-img" onclick="location.href=\'profile.html?movie='+name.replace('\'','').replace('\"','').split(" ").join("+")+'/'+id+'\';">'+
                         '<img src= "'+imgurl+'">'+
                       '</div>'+
-                       '<div class="menu-movie-name" onclick="location.href=\'profile.html?movie='+name.split(" ").join("+")+'/'+id+'\';">'+name+'</div>'+
+                       '<div class="menu-movie-name" onclick="location.href=\'profile.html?movie='+name.replace('\'','').replace('\"','').split(" ").join("+")+'/'+id+'\';">'+name+'</div>'+
                        '<div class="menu-remove-icon">'+
                         '<i class="fa fa-times"id="'+name+'@'+imgurl+'"></i></div>'+
                         '</div>'+

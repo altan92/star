@@ -42,6 +42,7 @@ $(document).ready(function(){
 			}
 			response['genre'] = genre;
 			response["poster_path"]= "https://image.tmdb.org/t/p/original" + response["poster_path"];
+			response["backdrop_path"]= "https://image.tmdb.org/t/p/original" + response["backdrop_path"];
 			$.ajax({
 				'url': "http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=bx8uz4gdtrn2kx87czmpby74&q=" + movie + "&page_limit=1",
 				'type': 'GET',

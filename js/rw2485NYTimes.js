@@ -88,7 +88,6 @@ function movieReviews(){
 		console.log("error");
 	}
 	});
- 		// console.log(data);
  }
 
 
@@ -113,11 +112,7 @@ $(document).ready(function(){
 
 
 function attachMovieData(picks){
-	console.log(picks);
-
-	
-	
-	
+	console.log(picks);	
 	for (var i = 1 ; i < 10; i++) {
 
 		if('multimedia' in picks.results[i] && (i%2 === 0)){
@@ -264,6 +259,19 @@ function parseTitle(string){
 	}
 	return answer;
 }
+function parseVote(rating){
+	return roundnum(rating);
+}
+
+function roundnum(n) {
+	var rating = (Math.round(n)/2)+1;
+	var answer = ""
+	while (rating > 1){
+		rating = rating - 1;
+		answer = answer + "&#9733;"
+	}
+	return answer;
+}
 			
 function append(first_photo, i){	
 		first_photo["poster_path"]= "https://image.tmdb.org/t/p/original" + first_photo["poster_path"];
@@ -276,6 +284,7 @@ function append(first_photo, i){
 		if(first_photo["tagline"]==""){
 			first_photo["tagline"] = "Love is a friendship set to music";
 		}
+		first_photo["rating"] = parseVote(first_photo["vote_average"]);
 		var images = ich.images(first_photo);
 		$('#images').append(images);
 		console.log(i);

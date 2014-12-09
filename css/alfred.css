@@ -45,7 +45,7 @@
   -webkit-font-smoothing: antialiased;
 }
 .tit{
-	font:20px Serif;
+	font:18px Serif;
 	color:white;
 	padding:1px 1px 1px 1px;
 }
@@ -58,4 +58,12 @@
 	color:white;
 	padding:1px 1px 1px 1px;
 }
+.rating{
+	float: right;
+}
+#rating{
+	color:white;
+	margin-top: 5px;
+}
+
 

@@ -365,9 +365,10 @@
 
 .related_profile{
 	position: relative;
-	 margin-right: 115px;
+	 margin-right: 60px;
 	 margin-left: 18px;
 	 height: 785px;
+	  width: 238px;
 }
 .related_movies{
 	box-shadow: 5px 5px 5px #888888;
@@ -387,7 +388,7 @@
 .prof_body{
 
 	margin-top:-30px;
-	margin-left:30px;
+	margin-left:3px;
 	border-radius: 10px;
 	background-color:#E6E6E6;
 	/*box-shadow: 10px 10px 5px #688889;*/

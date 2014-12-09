@@ -124,7 +124,10 @@
 	color:black;
 	font:20px Serif;
 	text-align: center;
-	box-shadow: 3px 3px 3px #888888;
+	box-shadow: 1px 1px 1px #888888;
+	padding: 5%;
+	margin-top: -3%;
+	background-color: #fed136;
 }
 .related-header{
 	box-shadow: 3px 3px 3px #888888;	
@@ -323,10 +326,9 @@
 }
 
 #watch_more{
-
-	margin-top: 10px;
+	margin-top: 12px;
 	margin-bottom: 10px;
-	margin-left: 78%;
+	margin-left: 1%;
 	box-shadow: 2px 2px 2px gray;
 }
 
@@ -365,10 +367,9 @@
 
 .related_profile{
 	position: relative;
-	 margin-right: 25px;
-	 margin-left: 18px;
-	 /*height: 785px;*/
-	  /*width: 238px;*/
+	 margin-right: 34px;
+	 margin-left: 20px;
+	 box-shadow: 10px 10px 5px gray;
 }
 .related_movies{
 	box-shadow: 5px 5px 5px #888888;
@@ -397,7 +398,7 @@
 	margin-top:33px;
 	margin-left:48px;
 	border-radius: 10px;
-	background-color:#BDBDBD;
+	/*background-color:#BDBDBD;*/
 }
 
 #profile{
@@ -431,7 +432,6 @@
 	height: 80px;
 	border: solid;
 	color: black;
-
 }
 .menu-watch-list:hover { 
   background-color: rgba(0, 0, 0, 0.1);

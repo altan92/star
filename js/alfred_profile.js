@@ -27,7 +27,28 @@ $(document).ready(function(){
 			console.log("error");
 		}
 	});
-	
+		var articleURL = "http://api.nytimes.com/svc/search/v2/articlesearch.json?q="+ movie + "&fq=movies&api-key=";
+	 $.ajax({
+		'url': articleURL+"bcc7dfa0080d4655266e442f77465546:2:70159037",
+		'type': 'GET',
+		'dataType': "json",
+		success: function(data, textStats, XMLHttpRequest) {
+			// var stringData = JSON.stringify(data);
+			// localStorage.setItem("articles", stringData);
+			// printArticleData(); 
+			
+			for(var i = 0; i < data.response.docs.length; i++){
+				var first_article = data.response.docs[i];
+				first_article["print_headline"]= first_article.headline.main;
+				var articles = ich.each_article(first_article);
+				$("#each_article").append(articles);
+			}
+			
+		},
+		error: function(data, textStatus, errorThrown) {
+			console.log("error");
+		}
+		});
 	$.ajax({
 		//'url': "https://api.themoviedb.org/3/search/movie?api_key=d1d7ccec36948efe0fe4750abc77836f&query=" + searchQuery,
 		'url': "http://api.themoviedb.org/3/movie/" + id + "?api_key=d1d7ccec36948efe0fe4750abc77836f",
@@ -38,6 +59,10 @@ $(document).ready(function(){
 			var response = data; 
 			var genre="";
 			for (var i = 0; i < response.genres.length ;i++) {
+				if(response.genres.length == 1){
+					genre = genre + response.genres[i].name; 
+					break
+				}
 				if(i==(response.genres.length-1)){
 					genre = genre + 'and ' + response.genres[i].name;
 					break;

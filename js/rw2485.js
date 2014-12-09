@@ -385,3 +385,8 @@ jQuery(document).ready(function() {
 	// 	$('.carousel').css({'width': $(window).outerWidth(), 'height': $(window).outerHeight()});
 	// });
 }); 
+
+
+
+
+

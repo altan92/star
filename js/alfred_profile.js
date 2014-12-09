@@ -60,7 +60,7 @@ $(document).ready(function(){
 						cast = cast + output.abridged_cast[i].name + ', ';
 
 					}
-					var button = '<span class="add-to-list" id="'+response["title"]+'@'+response["backdrop_path"]+'">';
+					var button = '<span class="add-to-list" id="'+response["title"]+'@'+response["backdrop_path"]+'@'+response["id"]+'">';
         			button = button + '<div id="watch_more" class="pure-button btn-custom" href="#">Add to watch list!</div></span>';
         			
         			response["button"] = button;

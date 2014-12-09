@@ -521,17 +521,14 @@
                 
                     <figure class="pop"  data-html="true" data-toggle="popover" title="<a class='hovercolor' href='profile.html?movie={{query}}'>{{title}}</a>" data-content="<p>{{overview}}<a class='readmore' href='profile.html?movie={{query}}'>Read More</a></p><hr>{{button}}<div class='rating'>{{rating}}</div>">
                         <img src={{poster_path}}>
-                        <a class='clickImage' href='profile.html?movie={{query}}'><img src={{poster_path}}></a>
                         <figcaption>
+                            <div onclick="location.href='profile.html?movie={{query}}';">
                             <span class="tit">{{title}}</span>
                             <span id='rating'>{{{rating}}}</span>
                             <hr>
                             <span class="tag"><i>{{tagline}}</i></span>
                             <hr>
                             <span class="date">Released {{release_date}}</span>
-
-                         
-                         
                         </figcaption>
                     </figure>
                

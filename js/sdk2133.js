@@ -17,10 +17,12 @@ $(document).ready(function(){
 		var currentlist = watchlist.movielist;
 		var name;
 		var imgurl;
+		var id;
 		for (var i = currentlist.length-1; i >= 0; i--) {
 			name=currentlist[i].name
 			imgurl=currentlist[i].imageurl
-			$('.dropdown-menu').prepend(newMovieOnList(name,imgurl));
+			id = currentlist[i].id
+			$('.dropdown-menu').prepend(newMovieOnList(name,imgurl,id));
 		};
 	}
 
@@ -28,9 +30,10 @@ $(document).ready(function(){
 		var movie = this.id.split('@');
 		var name = movie[0];
 		var imageurl = movie[1];
+		var id = movie[2];
 
-		if(addMovie(watchlist,name,imageurl)){
-			$('.dropdown-menu').prepend(newMovieOnList(name,imageurl));
+		if(addMovie(watchlist,name,imageurl,id)){
+			$('.dropdown-menu').prepend(newMovieOnList(name,imageurl,id));
 		}
 
 	});
@@ -46,10 +49,10 @@ $(document).ready(function(){
 });
 
 // adds movie to the watch list
-function addMovie(watchlist,name, imageurl){
+function addMovie(watchlist,name, imageurl,id){
 
 	if(!findMovie(watchlist,name)){
-		var newmovie = {"name":name,"imageurl":imageurl};
+		var newmovie = {"name":name,"imageurl":imageurl,'id':id};
 		currentlist = watchlist.movielist;
 		currentlist[currentlist.length] = newmovie;
 		localStorage.setItem("watchlist", JSON.stringify(watchlist));
@@ -88,19 +91,17 @@ function findMovie(watchlist,name){
 	return false;
 }
 
-function newMovieOnList(name, imgurl){
+function newMovieOnList(name, imgurl,id){
 
 	var inner = '<li>'+
-				'<a href="profile.html?movie='+name.split(" ").join("+")+'">'+
-                     '<div class= "menu-watch-list">'+
-                     '<div class="menu-movie-img">'+
+                     '<div class="menu-watch-list">'+
+                     '<div class="menu-movie-img" onclick="location.href=\'profile.html?movie='+name.split(" ").join("+")+'/'+id+'\';">'+
                         '<img src= "'+imgurl+'">'+
                       '</div>'+
-                       '<div class="menu-movie-name">'+name+'</div>'+
+                       '<div class="menu-movie-name" onclick="location.href=\'profile.html?movie='+name.split(" ").join("+")+'/'+id+'\';">'+name+'</div>'+
                        '<div class="menu-remove-icon">'+
                         '<i class="fa fa-minus-circle"id="'+name+'@'+imgurl+'"></i></div>'+
                         '</div>'+
-                 '</a>'+
                  '</li>'
     return inner;
 }

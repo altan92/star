@@ -271,7 +271,7 @@ function append(first_photo, i){
 		first_photo["backdrop_path"]= "https://image.tmdb.org/t/p/original" + first_photo["backdrop_path"];
 		first_photo["overview"] = first_photo["overview"].split(" ").slice(0,30).join(" ");
 		first_photo["overview"] = first_photo["overview"] + ".... "
-		var button = '<span class="add-to-list" id="'+first_photo["title"]+'@'+first_photo["backdrop_path"]+'">';
+		var button = '<span class="add-to-list" id="'+first_photo["title"]+'@'+first_photo["backdrop_path"]+'@'+first_photo["id"]+'">';
         button = button + '<div class="pure-button btn-custom" href="#">Add to watch list!</div></span>';
         first_photo["button"] = button;
 		first_photo['title']=parseTitle(first_photo['title']);

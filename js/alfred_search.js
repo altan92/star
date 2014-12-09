@@ -11,7 +11,7 @@ $(document).ready(function(){
 		'dataType': "json",
 		success: function(data, textStats, XMLHttpRequest) {
 
-			console.log(data);
+			
 			imageLinkPrinter(data);
 		},
 		error: function(data, textStatus, errorThrown) {
@@ -27,13 +27,14 @@ $(document).ready(function(){
 			// var stringData = JSON.stringify(data);
 			// localStorage.setItem("articles", stringData);
 			// printArticleData(); 
+			
 			for(var i = 0; i < data.response.docs.length; i++){
 				var first_article = data.response.docs[i];
 				first_article["print_headline"]= first_article.headline.main;
 				var articles = ich.each_article(first_article);
 				$("#each_article").append(articles);
 			}
-			console.log(data);
+			
 		},
 		error: function(data, textStatus, errorThrown) {
 			console.log("error");
@@ -51,8 +52,12 @@ $(document).ready(function(){
 		'dataType': "json",
 		success: function(data, textStats, XMLHttpRequest) {
 
-			
-			imageLinkPrinter(data);
+			if(data.results.length ==0){
+				$("#searches").html("<h1 style='color:red;'>No movies found!</h1>"); 
+			}
+			else {
+				imageLinkPrinter(data);
+			}
 		},
 		error: function(data, textStatus, errorThrown) {
 			console.log("error");
@@ -67,13 +72,14 @@ $(document).ready(function(){
 			// var stringData = JSON.stringify(data);
 			// localStorage.setItem("articles", stringData);
 			// printArticleData(); 
+			
 			for(var i = 0; i < data.response.docs.length; i++){
 				var first_article = data.response.docs[i];
 				first_article["print_headline"]= first_article.headline.main;
 				var articles = ich.each_article(first_article);
 				$("#each_article").append(articles);
 			}
-			console.log(data);
+			
 		},
 		error: function(data, textStatus, errorThrown) {
 			console.log("error");
@@ -172,7 +178,7 @@ $(document).ready(function(){
         button = button + '<div class="pure-button btn-custom" href="#">Add to watch list!</div></span>';
         first_photo["button"] = button;
 		first_photo['title']=parseTitle(first_photo['title']);
-		var query = first_photo['title'].split(" ").join("+");
+		var query = first_photo['title'].replace('\'','').replace('\"','').split(" ").join("+");
 		query = query.substring(0, query.length - 1);
 		first_photo['query'] = query + '/' + first_photo['id'];;
 		if(first_photo["tagline"]==""){

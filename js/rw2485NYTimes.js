@@ -112,17 +112,20 @@ $(document).ready(function(){
 
 function attachMovieData(picks){
 	console.log(picks);	
+	var temp = [1,2,295484,273261,213204,253283,276908,298422,266718,284293]; 
 	for (var i = 1 ; i < 10; i++) {
 
 		if('multimedia' in picks.results[i] && (i%2 === 0)){
 			// picks.results[i]["timeline"]= "";
 			picks.results[i]["picture"]= picks.results[i].multimedia.resource.src;
 			console.log(picks.results[i]);
+			picks.results[i]["query"]= picks.results[i].display_title + '/' + temp[i];
 			var critic = ich.critic(picks.results[i]);
 			$('#critic').append(critic);
 		}else if('multimedia' in picks.results[i] ){
 			picks.results[i]["timeline"]= "timeline-inverted";
 			picks.results[i]["picture"]= picks.results[i].multimedia.resource.src;
+			picks.results[i]["query"]= picks.results[i].display_title + '/' + temp[i];
 			console.log(picks.results[i]);
 			var critic = ich.critic(picks.results[i]);
 			$('#critic').append(critic);

@@ -92,7 +92,7 @@ $(document).ready(function(){
 
 					}
 					var button = '<span class="add-to-list" id="'+response["title"]+'@'+response["backdrop_path"]+'@'+response["id"]+'">';
-        			button = button + '<div id="watch_more" class="pure-button btn-custom" href="#">Add to watch list!</div></span>';
+        			button = button + '<div id="watch_more" class="pure-button btn-custom" href="#">Add to watch list!</div></span><div id="newalert"></div>';
         			
         			response["button"] = button;
 					response["cast"] = cast;

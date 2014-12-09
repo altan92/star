@@ -37,7 +37,7 @@ $(document).ready(function(){
 			$('#newalert').html('<div class="alert alert-success" role="alert">Added to the list!</div>');
 		}
 		else{
-			$('#newalert').html('<div class="alert alert-danger" role="alert">Movie already in list!</div>')
+			$('#newalert').html('<div class="alert alert-danger" role="alert">Movie already in list!</div>');
 		}
 		
 
@@ -49,7 +49,10 @@ $(document).ready(function(){
 		console.log(name);
 		removeMovie(watchlist,name);
 		$(this).parents("li")[0].remove();
+		
+  
 		$('#removelist').html('<div class="alert alert-success" role="alert" style="text-align:center;margin-left:auto;margin-right:auto; width:500px;">Removed from list!</div>').fadeOut(5000);
+	
 	});
 
 });

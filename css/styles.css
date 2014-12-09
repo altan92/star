@@ -419,6 +419,10 @@
 	color: black;
 
 }
+.menu-watch-list:hover { 
+  background-color: rgba(0, 0, 0, 0.1);
+
+}
 .menu-movie-img{
 	margin: 5px;
 	float: left;

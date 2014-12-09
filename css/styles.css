@@ -422,6 +422,7 @@
 }
 
 .watchlist{
+	min-height: 91px;
 	max-height:350px;
 	overflow-y:scroll; 
 	width: 420px;

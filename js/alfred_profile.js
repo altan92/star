@@ -48,7 +48,7 @@ $(document).ready(function(){
 				'type': 'GET',
 				'dataType': "jsonp",
 				success: function(data, textStats, XMLHttpRequest) {	
-					console.log(data);
+					
 					output = data.movies[0];
 					var cast ="";
 					for (var i = 0; i < output.abridged_cast.length ;i++) {
@@ -97,9 +97,10 @@ $(document).ready(function(){
 		success: function(data, textStats, XMLHttpRequest) {
 			console.log(data);
 			for (var i = 0; i < data.results.length ;i++) {
-				
 				var first_review = data.results[i];
-				
+				first_review["reviewlink"] = "http://" + first_review.link.url.substring(14);
+				//var user_id = userComments.substr(userComments.indexOf("/id/") + 4).slice(0,-4); 
+				console.log(first_review["reviewlink"]);
 				var reviews = ich.nytreviews(first_review);
 				$("#nytreviews").append(reviews);
 			}

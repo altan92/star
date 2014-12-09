@@ -199,11 +199,13 @@
 ]
      <script id="nytreviews" type="text/html">
         <div class="review">
-                    <h4>By {{byline}} at {{publication_date}}</h4>
+                    <h2>{{headline}}</h1>
+                    <h5>By {{byline}} on {{publication_date}}</h5>
                     <div class="comment">
                         <p>{{summary_short}}</p>
                     </div>
-                    <a href='#'>Click for more comments by this critic</a>
+                     <a href="{{reviewlink}}?lightbox[iframe]=true&lightbox[width]=90p&lightbox[height]=96p" class="page-scroll lightbox" id="prof-related-article"><button class="btn btn-primary btn-warning"><span class="glyphicon glyphicon-film" ></span> Read article</a>
+                    
         </div>
         <hr>
      </script>

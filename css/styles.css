@@ -351,14 +351,10 @@
 }
 
 .related_profile{
-	border-radius: 10px;
-	 background-color: white;
-	 border: solid;
-	 width: 238px;
-	 float: right;
-	 height:560px;
-	 margin-top: 560px;
-	 margin-right: -238px;
+	position: relative;
+	 margin-right: 115px;
+	 margin-left: 18px;
+	 height: 785px;
 }
 .related_movies{
 	box-shadow: 5px 5px 5px #888888;

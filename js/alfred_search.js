@@ -18,7 +18,7 @@ $(document).ready(function(){
 			console.log("error");
 		}
 		});
-			var articleURL = "http://api.nytimes.com/svc/search/v2/articlesearch.json?q=popular&fq=movies&api-key=";
+		var articleURL = "http://api.nytimes.com/svc/search/v2/articlesearch.json?q=popular&fq=movies&api-key=";
 	 $.ajax({
 		'url': articleURL+"bcc7dfa0080d4655266e442f77465546:2:70159037",
 		'type': 'GET',

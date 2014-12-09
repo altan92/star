@@ -555,7 +555,7 @@ section h3.section-subheading {
 
     .timeline>li .timeline-panel {
         float: left;
-        width: 41%;
+        width: 30%;
         padding: 0 20px 20px 30px;
         text-align: right;
     }
@@ -564,7 +564,7 @@ section h3.section-subheading {
         left: 50%;
         width: 100px;
         height: 100px;
-        margin-left: -50px;
+        /*margin-left: -10px;*/
     }
 
     .timeline>li .timeline-image h4 {

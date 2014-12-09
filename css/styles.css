@@ -34,6 +34,7 @@
 	 margin-left: 900px;
 	 padding: 5px;
 	 border-radius: 10px;
+	 overflow: hidden;
 	 /*overflow-y: scroll;*/
 	 height:615px;
 	 /*min-height: 615px;*/

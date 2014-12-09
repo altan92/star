@@ -89,7 +89,57 @@ function movieReviews(){
 	}
 	});
  		// console.log(data);
+ }
+
+
+$(document).ready(function(){	
+ $.ajax({
+	'url': "http://api.nytimes.com/svc/movies/v2/reviews/all.jsonp?api-key="+NYTimesKey.movie,
+	'type': 'GET',
+	'dataType': "jsonp",
+	success: function(data, textStats, XMLHttpRequest) {
+		
+		// var stringData = JSON.stringify(data);
+		// localStorage.setItem("movieReviews", stringData);
+		attachMovieData(data);
+		
+	},
+	error: function(data, textStatus, errorThrown) {
+		console.log("error");
+	}
+	});
+ 		// console.log(data);
+});
+
+
+function attachMovieData(picks){
+	console.log(picks);
+
+	
+	
+	
+	for (var i = 1 ; i < 10; i++) {
+
+		if('multimedia' in picks.results[i] && (i%2 === 0)){
+			// picks.results[i]["timeline"]= "";
+			picks.results[i]["picture"]= picks.results[i].multimedia.resource.src;
+			console.log(picks.results[i]);
+			var critic = ich.critic(picks.results[i]);
+			$('#critic').append(critic);
+		}else if('multimedia' in picks.results[i] ){
+			picks.results[i]["timeline"]= "timeline-inverted";
+			picks.results[i]["picture"]= picks.results[i].multimedia.resource.src;
+			console.log(picks.results[i]);
+			var critic = ich.critic(picks.results[i]);
+			$('#critic').append(critic);
+		}
+	};
+		
+
 }
+
+
+
 
 function relatedArticle(){
  $.ajax({

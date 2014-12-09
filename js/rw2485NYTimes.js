@@ -2,7 +2,7 @@
 /* The new times Articles Api provides large images for movies ` dont actuall
 y need to query the movie database. I have added console logs for all
 the relevent data */
-
+var counter = 0;
 $(document).ready(function(){	
 	$("[data-toggle=popover]").popover();
 	var NYTimesKey = ({
@@ -122,7 +122,6 @@ function printMovieData(){
         console.log(headline);
         console.log(summary_short);
         console.log(trailers_link);
-		
 	};
 	
 }
@@ -181,23 +180,6 @@ function imageLinkPrinter(imageLink){
 
 	for(var i = 0; i < imageLink.results.length; i++){	
 		var first_photo = imageLink.results[i];
-		// first_photo["poster_path"]= "https://image.tmdb.org/t/p/original" + first_photo["poster_path"];
-		
-		// if (1){
-   //          $.ajax({
-			// 	'url': "http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=bx8uz4gdtrn2kx87czmpby74&q=" + first_photo["title"] + "&page_limit=1",
-			// 	'type': 'GET',
-			// 	'dataType': "jsonp",
-			// 	'async': true,
-			// 	'timeout': 1000,
-			// 	success: function(data, textStats, XMLHttpRequest) {	
-			// 		console.log(data);
-			// 	},
-			// 	error: function(data, textStatus, errorThrown) {
-			// 		console.log("error");
-			// 	}
-					
-			// });
 		var temp=[];
 	$.ajax({
 		//'url': "https://api.themoviedb.org/3/search/movie/" + +"?api_key=d1d7ccec36948efe0fe4750abc77836f&query=" + searchQuery,
@@ -207,8 +189,9 @@ function imageLinkPrinter(imageLink){
 		success: function(data, textStats, XMLHttpRequest) {
 			//temp.push(data);
 			// console.log(temp);
+			counter = (counter + 1)%5;
 			console.log(data);
-			append(data, i);
+			append(data, counter);
 			
 		},
 		error: function(data, textStatus, errorThrown) {
@@ -216,19 +199,37 @@ function imageLinkPrinter(imageLink){
 		}
 	});
 		}}
-       
+
+function capitalize(string)
+{
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}     
+
+function parseTitle(string){
+	var answer = "";
+	arr = string.split(" ")
+	for (var item in arr){
+		answer = answer + capitalize(arr[item].toLowerCase())+" ";
+
+	}
+	return answer;
+}
 			
 function append(first_photo, i){	
 		first_photo["poster_path"]= "https://image.tmdb.org/t/p/original" + first_photo["poster_path"];
+		// console.log(first_photo["overview"] = first_photo["overview"].split("."));
+		first_photo["overview"] = first_photo["overview"].split(" ").slice(0,30).join(" ");
+		first_photo["overview"] = first_photo["overview"] + ".... "
+		first_photo["button"] = "<button class=\"btn-custom \" onclick=\"window.location.href='#test';\">Add to Watch List</button>"
+		// first_photo[""]
+		first_photo['title']=parseTitle(first_photo['title']);
+		if(first_photo["tagline"]==""){
+			first_photo["tagline"] = "Love is a friendship set to music";
+		}
 		var images = ich.images(first_photo);
 		$('#images').append(images);
-		if (((i+1) % 5) == 0){
-			//$("[data-toggle=popover]").popover({trigger:"hover", container: $(this), placement:"left"});
-			/*$(".pop").popover({trigger:"hover manual", container: 'body', placement:"left"}).click(function(e) {
-                e.preventDefault() ;
-            }).mouseenter(function(e) {
-                $(this).popover('show');
-            });*/
+		console.log(i);
+		if (i == 0){
 			$(".pop").popover({
 			  trigger: "manual",
 			  placement: "left",

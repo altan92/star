@@ -9,5 +9,53 @@
 }
 
 .popover{
-	width:200px;
+	width:300px;
+	color:black;
+	/*height:300px;*/
+	margin-top: 60px;
 }
+.popover p{
+	/*overflow-y: scroll;*/
+	/*height:130px;*/
+	width:100%;
+}
+.popover a{
+	color:red;
+}
+
+.popover-title{
+	background-color: black;
+	color:#fed136;
+}
+
+.btn-custom {
+  background-color: hsl(209, 100%, 72%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d6ebfe", endColorstr="#70b9ff");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#d6ebfe), to(#70b9ff));
+  background-image: -moz-linear-gradient(top, #d6ebfe, #70b9ff);
+  background-image: -ms-linear-gradient(top, #d6ebfe, #70b9ff);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d6ebfe), color-stop(100%, #70b9ff));
+  background-image: -webkit-linear-gradient(top, #d6ebfe, #70b9ff);
+  background-image: -o-linear-gradient(top, #d6ebfe, #70b9ff);
+  background-image: linear-gradient(#d6ebfe, #70b9ff);
+  border-color: #70b9ff #70b9ff hsl(209, 100%, 67%);
+  color: #333 !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.33);
+  -webkit-font-smoothing: antialiased;
+}
+.tit{
+	font:20px Serif;
+	color:white;
+	padding:1px 1px 1px 1px;
+}
+.tag{
+	font:16px Serif;
+	padding:1px 1px 1px 1px;
+}
+.date{
+	font:16px Serif;
+	color:white;
+	padding:1px 1px 1px 1px;
+}
+

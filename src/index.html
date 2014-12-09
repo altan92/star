@@ -800,12 +800,15 @@
     <script id="images" type="text/html">
       <li class="pure-u-1-3 movie_title">
                 
-                    <figure class="pop"  data-toggle="popover" title="{{title}}" data-content="{{overview}}">
+                    <figure class="pop"  data-html="true" data-toggle="popover" title="{{title}}" data-content="<p>{{overview}}<a href='#'>Read More</a></p><hr>{{button}}">
                         <img src={{poster_path}}>
 
                         <figcaption>
-                            <h3>{{title}}</h3>
-                            <span>Directed by: Gary Ross</span>
+                            <span class="tit">{{title}}</span>
+                            <hr>
+                            <span class="tag"><i>{{tagline}}</i></span>
+                            <hr>
+                            <span class="date">Released {{release_date}}</span>
 
                          
                          

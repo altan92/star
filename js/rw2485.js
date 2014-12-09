@@ -368,10 +368,10 @@ function rottenBoxOffice(){
 //cauracel
 
 jQuery(document).ready(function() {
-	$('.carousel').carousel({
-    	pause: "false",
-    	interval: 6000
-	});
+	// $('.carousel').carousel({
+ //    	pause: "false",
+ //    	interval: 6000
+	// });
 
 	// $('.carousel').css({'margin': 0, 'width': $(window).outerWidth(), 'height': $(window).outerHeight()});
 	// $('.carousel .item').css({'position': 'relative', 'width': '100%', 'height': '90%'});

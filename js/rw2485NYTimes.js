@@ -14,6 +14,11 @@ $(document).ready(function(){
     var moviesUrl = "http://api.nytimes.com/svc/movies/v2/reviews/search.jsonp?query=james+cameron&api-key=";
 	var articleURL = "http://api.nytimes.com/svc/search/v2/articlesearch.json?q=movies&fq=The+hunger+games&api-key=";
 	var searchQuery= "Hunger Games";
+	
+	$.ajaxSetup({
+    timeout: 3000, 
+    retryAfter:7000
+	});
 	$.ajax({
 		//'url': "https://api.themoviedb.org/3/search/movie?api_key=d1d7ccec36948efe0fe4750abc77836f&query=" + searchQuery,
 		'url': "http://api.themoviedb.org/3/movie/popular?api_key=d1d7ccec36948efe0fe4750abc77836f",
@@ -22,12 +27,39 @@ $(document).ready(function(){
 		success: function(data, textStats, XMLHttpRequest) {
 
 			imageLinkPrinter(data);
-			console.log(data);
+			console.log(data)
+			
 		},
 		error: function(data, textStatus, errorThrown) {
 			console.log("error");
 		}
 	});
+	// $.ajax({
+	// 	//'url': "https://api.themoviedb.org/3/search/movie?api_key=d1d7ccec36948efe0fe4750abc77836f&query=" + searchQuery,
+	// 	'url': "http://api.themoviedb.org/3/movie/157336?api_key=d1d7ccec36948efe0fe4750abc77836f",
+	// 	'type': 'GET',
+	// 	'dataType': "json",
+	// 	success: function(data, textStats, XMLHttpRequest) {
+
+			
+	// 		console.log(data);
+	// 	},
+	// 	error: function(data, textStatus, errorThrown) {
+	// 		console.log("error");
+	// 	}
+	// });
+
+	// $.ajax({
+	// 	'url': "http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=bx8uz4gdtrn2kx87czmpby74&q=The Maze Runner&page_limit=1",
+	// 	'type': 'GET',
+	// 	'dataType': "jsonp",
+	// 	success: function(data, textStats, XMLHttpRequest) {	
+	// 		console.log(data);
+	// 	},
+	// 	error: function(data, textStatus, errorThrown) {
+	// 		console.log("error");
+	// 	}
+	// });
 	
 
 $(document.body).on('click', '#movieReview', function() {
@@ -124,24 +156,103 @@ function printArticleData(){
 	};
 	
 }
+// function callAjax(first_photo) {
+//     $.ajax({
+// 				'url': "http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=bx8uz4gdtrn2kx87czmpby74&q=" + first_photo["title"] + "&page_limit=1",
+// 				'type': 'GET',
+// 				'dataType': "jsonp",
+// 				success: function(data, textStats, XMLHttpRequest) {	
+// 					console.log(first_photo);
+// 					setTimeout(callAjax, 2000);
+// 				},
+// 				error: function(data, textStatus, errorThrown) {
+// 					console.log("error");
+// 				}
+// 			});
+// }
+
 function imageLinkPrinter(imageLink){
 	
-	
 	for(var i = 0; i < imageLink.results.length; i++){
-
+		
 		
 		var first_photo = imageLink.results[i];
 		first_photo["poster_path"]= "https://image.tmdb.org/t/p/original" + first_photo["poster_path"];
+		
+		// if (1){
+  //           $.ajax({
+		// 		'url': "http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=bx8uz4gdtrn2kx87czmpby74&q=" + "Interstellar" + "&page_limit=1",
+		// 		'type': 'GET',
+		// 		'dataType': "jsonp",
+		// 		'async': true,
+		// 		'timeout': 1000,
+		// 		success: function(data, textStats, XMLHttpRequest) {	
+		// 			console.log(data);
+		// 		},
+		// 		error: function(data, textStatus, errorThrown) {
+		// 			console.log("error");
+		// 		}
+					
+		// 	});
+		// }
+       
+			
+		
 		var images = ich.images(first_photo);
 		$('#images').append(images);
 		if (((i+1) % 5) == 0){
 			//$("[data-toggle=popover]").popover({trigger:"hover", container: $(this), placement:"left"});
-			$(".pop").popover({trigger:"hover", container: 'body', placement:"left"});
+			/*$(".pop").popover({trigger:"hover manual", container: 'body', placement:"left"}).click(function(e) {
+                e.preventDefault() ;
+            }).mouseenter(function(e) {
+                $(this).popover('show');
+            });*/
+			$(".pop").popover({
+			  trigger: "manual",
+			  placement: "left",
+			}).on("click", function(e) {
+			  e.preventDefault();
+			}).on("mouseenter", function() {
+			  var _this = this;
+			  $(this).popover("show");
+			  $(this).siblings(".popover").on("mouseleave", function() {
+			    $(_this).popover('hide');
+			  });
+			}).on("mouseleave", function() {
+			  var _this = this;
+			  setTimeout(function() {
+			    if (!$(".popover:hover").length) {
+			      $(_this).popover("hide")
+			    }
+			  }, 100);
+			});
 		} else {
 			//$("[data-toggle=popover]").popover({trigger:"hover", container: $(this)});
-			$(".pop").popover({trigger:"hover",container: 'body'});
+			/*$(".pop").popover({trigger:"hover manual",container: 'body'}).click(function(e) {
+                e.preventDefault() ;
+            }).mouseenter(function(e) {
+                $(this).popover('show');
+            });*/
+			$(".pop").popover({
+			  trigger: "manual",
+			}).on("click", function(e) {
+			  e.preventDefault();
+			}).on("mouseenter", function() {
+			  var _this = this;
+			  $(this).popover("show");
+			  $(this).siblings(".popover").on("mouseleave", function() {
+			    $(_this).popover('hide');
+			  });
+			}).on("mouseleave", function() {
+			  var _this = this;
+			  setTimeout(function() {
+			    if (!$(".popover:hover").length) {
+			      $(_this).popover("hide")
+			    }
+			  }, 100);
+			});
 		}
-		console.log(imageLink.results[i]);
+		//console.log(imageLink.results[i]);
 		//console.log(imageLink.results[i].backdrop_path);
 	}
 

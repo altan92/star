@@ -9,12 +9,17 @@ $(document).ready(function(){
 		'type': 'GET',
 		'dataType': "json",
 		success: function(data, textStats, XMLHttpRequest) {
-			
-			var first_trailer = data.results[0];
-			first_trailer["movietrailer"]= "https://youtube.com/embed/" + first_trailer["key"] + "?autoplay=0&controls=1&showinfo=0&autohide=1"; 
-			var trailers = ich.video(first_trailer);
-			$("#video").append(trailers);
-
+			console.log(data);
+			if (data.results.length==0){
+				console.log("POOP");
+				$("#novid").removeClass("hidden");
+			}
+			else{
+				var first_trailer = data.results[0];
+				first_trailer["movietrailer"]= "https://youtube.com/embed/" + first_trailer["key"] + "?autoplay=0&controls=1&showinfo=0&autohide=1"; 
+				var trailers = ich.video(first_trailer);
+				$("#video").append(trailers);
+			}
 			
 			
 		},

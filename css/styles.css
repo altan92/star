@@ -105,7 +105,7 @@
 	margin-bottom: 4px;
 }
 .star{
-	    -webkit-touch-callout: none;
+	-webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
@@ -365,10 +365,10 @@
 
 .related_profile{
 	position: relative;
-	 margin-right: 60px;
+	 margin-right: 25px;
 	 margin-left: 18px;
-	 height: 785px;
-	  width: 238px;
+	 /*height: 785px;*/
+	  /*width: 238px;*/
 }
 .related_movies{
 	box-shadow: 5px 5px 5px #888888;
@@ -386,9 +386,8 @@
 	overflow-y: scroll;
 }
 .prof_body{
-
 	margin-top:-30px;
-	margin-left:3px;
+	margin-left:-9px;
 	border-radius: 10px;
 	background-color:#E6E6E6;
 	/*box-shadow: 10px 10px 5px #688889;*/
@@ -524,9 +523,6 @@
 
     
 }
-​
-
-
 .html{
 font-family: 'Lato', Calibri, Arial, sans-serif;
 }

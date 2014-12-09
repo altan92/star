@@ -11,7 +11,7 @@
 	margin-bottom: 6px;
 	border-radius: 10px;
 	box-shadow: 4px 4px 5px #888888;
-	
+
 }
 
 .search_result:hover { 
@@ -400,7 +400,7 @@
 .video{
 	height:500px;
 	width:100%;
-	box-shadow: 10px 15px 10px #888888;
+	box-shadow: 10px 10px 5px #888888;
 	/*background-color: rgba(150,150,150,0.9);*/
 	/*white-space:nowrap;*/
     /*overflow:hidden;*/

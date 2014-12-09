@@ -31,7 +31,7 @@
 
 .related{
 	 background-color: white;
-	 border: solid;
+	 /*border: solid;*/
 	 width: 300px;
 	 float: right;
 	 position:fixed;
@@ -42,7 +42,7 @@
 	 /*overflow-y: scroll;*/
 	 height:615px;
 	 /*min-height: 615px;*/
-	 box-shadow: 5px 500pxpx 5px #888888;
+	 box-shadow: 1px 1px 1px #888888;
 }
 
 .all_related{
@@ -124,16 +124,17 @@
 	color:black;
 	font:20px Serif;
 	text-align: center;
-	box-shadow: 5px 5px 5px #888888;
+	box-shadow: 3px 3px 3px #888888;
 }
 .related-header{
-	
+	box-shadow: 3px 3px 3px #888888;	
 }
 
 .related-article{
 	/*border-top: 1px solid black;*/
-	box-shadow: 5px 5px 5px #888888;
-	padding: 5px;
+	box-shadow: 3px 3px 5px #888888;
+	padding: 10px;
+	border-radius: 15px 15px 15px 15px;
 }
 
 .headline{
@@ -457,4 +458,6 @@
 	margin-left: -138px;
 	margin-right:32%;
 }
-
+.html{
+font-family: 'Lato', Calibri, Arial, sans-serif;
+}

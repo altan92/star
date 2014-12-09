@@ -412,18 +412,22 @@
 .menu-watch-list{
 	height: 80px;
 	border: solid;
+	color: black;
 }
 .menu-movie-img{
 	margin: 5px;
 	float: left;
+	color: black;
 }
 .menu-movie-name{
 	float: left;
 	margin-top: 15px;
 	margin-left: 10px;
+	color: black;
 }
 .menu-remove-icon{
 	float: left;
 	margin-top: 15px;
 	margin-left: 10px;
+	color: black;
 }

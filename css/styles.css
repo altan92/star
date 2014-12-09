@@ -362,10 +362,16 @@
 	overflow-y: scroll;
 }
 .prof_body{
-	margin-top:100px
+	margin-top:-30px
 }
 
 .carousel-caption {
     background-color: #fff;
     background-color: rgba(150,150,150,0.5);
+}
+.video{
+	height:500px;
+	width:100%;
+	    white-space:nowrap;
+    overflow:hidden;
 }

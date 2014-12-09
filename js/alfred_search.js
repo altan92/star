@@ -1,6 +1,5 @@
+var counter = 0;
 $(document).ready(function(){	
-	
-
 	var movie = get('movie');
 	if (movie==""){
 		
@@ -82,49 +81,110 @@ $(document).ready(function(){
 		});
 	}
 
-	
+	function capitalize(string)
+		{
+		    return string.charAt(0).toUpperCase() + string.slice(1);
+		}     
+
+	function parseTitle(string){
+		var answer = "";
+		arr = string.split(" ")
+		for (var item in arr){
+			answer = answer + capitalize(arr[item].toLowerCase())+" ";
+
+		}
+		return answer;
+	}
+
+	function parseVote(rating){
+		return roundnum(rating);
+	}
+
+	function roundnum(n) {
+		var rating = (Math.round(n)/2)+1;
+		var answer = ""
+		while (rating > 1){
+			rating = rating - 1;
+			answer = answer + "&#9733;"
+		}
+		return answer;
+	}
 
 	function imageLinkPrinter(imageLink){
-	var counter=0;
 	for(var i = 0; i < imageLink.results.length; i++){
-		
-		
 		var first_photo = imageLink.results[i];
 		if(first_photo["poster_path"] == null){
-			
 			continue;
 		}
+		$.ajax({
+		//'url': "https://api.themoviedb.org/3/search/movie/" + +"?api_key=d1d7ccec36948efe0fe4750abc77836f&query=" + searchQuery,
+		'url': "http://api.themoviedb.org/3/movie/" + first_photo["id"] + "?api_key=d1d7ccec36948efe0fe4750abc77836f",
+		'type': 'GET',
+		'dataType': "json",
+		success: function(data, textStats, XMLHttpRequest) {
+			//temp.push(data);
+			// console.log(temp);
+			counter = (counter + 1)%5;
+			console.log(data);
+			append(data, counter);
+			
+		},
+		error: function(data, textStatus, errorThrown) {
+			console.log("error");
+		}
+	});
+		}}
+	function capitalize(string)
+	{
+	    return string.charAt(0).toUpperCase() + string.slice(1);
+	}     
+
+	function parseTitle(string){
+		var answer = "";
+		arr = string.split(" ")
+		for (var item in arr){
+			answer = answer + capitalize(arr[item].toLowerCase())+" ";
+
+		}
+		return answer;
+	}
+	function parseVote(rating){
+		return roundnum(rating);
+	}
+
+	function roundnum(n) {
+		var rating = (Math.round(n)/2)+1;
+		var answer = ""
+		while (rating > 1){
+			rating = rating - 1;
+			answer = answer + "&#9733;"
+		}
+		return answer;
+	}
+	function append(first_photo, i){
+		console.log(first_photo);
 		
 		first_photo["poster_path"]= "https://image.tmdb.org/t/p/original" + first_photo["poster_path"];
-		
-		// if (1){
-  //           $.ajax({
-		// 		'url': "http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=bx8uz4gdtrn2kx87czmpby74&q=" + "Interstellar" + "&page_limit=1",
-		// 		'type': 'GET',
-		// 		'dataType': "jsonp",
-		// 		'async': true,
-		// 		'timeout': 1000,
-		// 		success: function(data, textStats, XMLHttpRequest) {	
-		// 			console.log(data);
-		// 		},
-		// 		error: function(data, textStatus, errorThrown) {
-		// 			console.log("error");
-		// 		}
-					
-		// 	});
-		// }
-       
-			
-		
+		first_photo["backdrop_path"]= "https://image.tmdb.org/t/p/original" + first_photo["backdrop_path"];
+		first_photo["overview"] = first_photo["overview"].split(" ").slice(0,30).join(" ");
+		first_photo["overview"] = first_photo["overview"] + ".... "
+		var button = '<span class="add-to-list" id="'+first_photo["title"]+'@'+first_photo["backdrop_path"]+'">';
+        button = button + '<div class="pure-button btn-custom" href="#">Add to watch list!</div></span>';
+        first_photo["button"] = button;
+		first_photo['title']=parseTitle(first_photo['title']);
+		var query = first_photo['title'].split(" ").join("+");
+		query = query.substring(0, query.length - 1);
+		first_photo['query'] = query;
+		if(first_photo["tagline"]==""){
+			first_photo["tagline"] = "Love is a friendship set to music";
+		}
+		first_photo["rating"] = parseVote(first_photo["vote_average"]);
+
+
+
 		var images = ich.searches(first_photo);
 		$('#searches').append(images);
-		if (((counter+1) % 3) == 0){
-			//$("[data-toggle=popover]").popover({trigger:"hover", container: $(this), placement:"left"});
-			/*$(".pop").popover({trigger:"hover manual", container: 'body', placement:"left"}).click(function(e) {
-                e.preventDefault() ;
-            }).mouseenter(function(e) {
-                $(this).popover('show');
-            });*/
+		if (((i+1) % 3) == 0){
 			$(".pop").popover({
 			  trigger: "manual",
 			  placement: "left",
@@ -175,7 +235,7 @@ $(document).ready(function(){
 		//console.log(imageLink.results[i].backdrop_path);
 	}
 
-}
+
 	function get(name){
 	   if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
 	      return decodeURIComponent(name[1]);

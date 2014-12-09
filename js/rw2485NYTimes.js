@@ -213,12 +213,6 @@ function callAjax(url) {
 				}
 			});
 }
-function sleep(miliseconds) {
-           var currentTime = new Date().getTime();
-
-           while (currentTime + miliseconds >= new Date().getTime()) {
-           }
-       }
 
 function imageLinkPrinter(imageLink){
 
@@ -244,51 +238,48 @@ function imageLinkPrinter(imageLink){
 	});
 		}}
 
-function capitalize(string)
-{
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}     
+	function capitalize(string)
+	{
+	    return string.charAt(0).toUpperCase() + string.slice(1);
+	}     
 
-function parseTitle(string){
-	var answer = "";
-	arr = string.split(" ")
-	for (var item in arr){
-		answer = answer + capitalize(arr[item].toLowerCase())+" ";
+	function parseTitle(string){
+		var answer = "";
+		arr = string.split(" ")
+		for (var item in arr){
+			answer = answer + capitalize(arr[item].toLowerCase())+" ";
 
+		}
+		return answer;
 	}
-	return answer;
-}
-function parseVote(rating){
-	return roundnum(rating);
-}
-
-function roundnum(n) {
-	var rating = (Math.round(n)/2)+1;
-	var answer = ""
-	while (rating > 1){
-		rating = rating - 1;
-		answer = answer + "&#9733;"
+	function parseVote(rating){
+		return roundnum(rating);
 	}
-	return answer;
-}
+
+	function roundnum(n) {
+		var rating = (Math.round(n)/2)+1;
+		var answer = ""
+		while (rating > 1){
+			rating = rating - 1;
+			answer = answer + "&#9733;"
+		}
+		return answer;
+	}
 			
 function append(first_photo, i){	
 		first_photo["poster_path"]= "https://image.tmdb.org/t/p/original" + first_photo["poster_path"];
 		first_photo["backdrop_path"]= "https://image.tmdb.org/t/p/original" + first_photo["backdrop_path"];
-		// console.log(first_photo["overview"] = first_photo["overview"].split("."));
 		first_photo["overview"] = first_photo["overview"].split(" ").slice(0,30).join(" ");
 		first_photo["overview"] = first_photo["overview"] + ".... "
-		// first_photo["button"] = "<button class=\"btn-custom \" onclick=\"window.location.href='#test';\">Add to Watch List</button>"
-		// first_photo[""]
 		var button = '<span class="add-to-list" id="'+first_photo["title"]+'@'+first_photo["backdrop_path"]+'">';
         button = button + '<div class="pure-button btn-custom" href="#">Add to watch list!</div></span>';
         first_photo["button"] = button;
 		first_photo['title']=parseTitle(first_photo['title']);
 		var query = first_photo['title'].split(" ").join("+");
-		console.log(query);
 		query = query.substring(0, query.length - 1);
-		console.log(query);
-		first_photo['query'] = query;
+
+		first_photo['query'] = query + '/' + first_photo['id'];
+
 
 		if(first_photo["tagline"]==""){
 			first_photo["tagline"] = "Love is a friendship set to music";

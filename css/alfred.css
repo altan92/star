@@ -23,7 +23,9 @@
 	color:red;
 }
 
-
+a.hovercolor:hover {
+	color:#fed136;
+}
 .popover-title{
 	background-color: black;
 }
@@ -73,6 +75,7 @@
 	width: 140px;
 	margin-top: 9px;
 	margin-left: 8px;
+	
 }
 .team{
 	height:200px;

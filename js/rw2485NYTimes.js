@@ -288,7 +288,7 @@ function append(first_photo, i){
 		console.log(query);
 		query = query.substring(0, query.length - 1);
 		console.log(query);
-		first_photo['query'] = query;
+		first_photo['query'] = query + '/' + first_photo['id'];
 
 		if(first_photo["tagline"]==""){
 			first_photo["tagline"] = "Love is a friendship set to music";

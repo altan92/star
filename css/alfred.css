@@ -23,7 +23,9 @@
 	color:red;
 }
 
-
+a.hovercolor:hover {
+	color:#fed136;
+}
 .popover-title{
 	background-color: black;
 }

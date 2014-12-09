@@ -277,7 +277,9 @@ function append(first_photo, i){
 		first_photo['title']=parseTitle(first_photo['title']);
 		var query = first_photo['title'].split(" ").join("+");
 		query = query.substring(0, query.length - 1);
-		first_photo['query'] = query;
+
+		first_photo['query'] = query + '/' + first_photo['id'];
+
 
 		if(first_photo["tagline"]==""){
 			first_photo["tagline"] = "Love is a friendship set to music";

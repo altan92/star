@@ -124,7 +124,7 @@ $(document).ready(function(){
 		success: function(data, textStats, XMLHttpRequest) {
 			//temp.push(data);
 			// console.log(temp);
-			counter = (counter + 1)%5;
+			counter = (counter + 1)%3;
 			console.log(data);
 			append(data, counter);
 			
@@ -184,7 +184,7 @@ $(document).ready(function(){
 
 		var images = ich.searches(first_photo);
 		$('#searches').append(images);
-		if (((i+1) % 3) == 0){
+		if (i == 0){
 			$(".pop").popover({
 			  trigger: "manual",
 			  placement: "left",
@@ -230,7 +230,7 @@ $(document).ready(function(){
 			  }, 100);
 			});
 		}
-		counter = counter+1; 
+		// counter = counter+1; 
 		//console.log(imageLink.results[i]);
 		//console.log(imageLink.results[i].backdrop_path);
 	}

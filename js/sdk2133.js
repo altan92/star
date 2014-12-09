@@ -43,7 +43,7 @@ $(document).ready(function(){
 		var name = movie[0];
 		console.log(name);
 		removeMovie(watchlist,name);
-		$(this).parents("a").remove();
+		$(this).parents("li")[0].remove();
 	});
 
 });

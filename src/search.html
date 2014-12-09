@@ -23,7 +23,7 @@
     
     <!-- Pure file -->
     <link rel="stylesheet" href="../css/pure.css">
-    
+     
     <!-- Lightbox files -->
     <link rel="stylesheet" type="text/css" href="../lightbox/themes/classic/jquery.lightbox.css" />
     <script src="../js/jquery-1.8.3.min.js"></script>
@@ -35,6 +35,9 @@
     <link rel="stylesheet" type="text/css" href="../css/component.css" />
     <link rel="stylesheet" type="text/css" href="../css/styles.css" />
         <script src="../js/modernizr.custom.js"></script>
+
+        <script type="text/javascript" src="../js/sdk2133.js"></script>
+    
 </head>
 
 <body id="page-top body-style" class="index body-style">
@@ -50,7 +53,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#">Start Bootstrap</a>
+                <a class="navbar-brand page-scroll" href="index.html">Movie Time</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -81,12 +84,42 @@
                     <li>
                         <a class="page-scroll" href="#team">Team</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                    <li>
-                        <a href="help.html?lightbox[iframe]=true&lightbox[width]=90p&lightbox[height]=96p" class="page-scroll lightbox">Help page</a>
-                    </li>
+                    
+                    
+                    <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-video-camera"></i>
+                        <span>WatchList</span>
+                         <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a>
+                                <div class= "menu-watch-list">
+                                    <div class="menu-movie-img">
+                                    <img src= 'https://image.tmdb.org/t/p/original/coss7RgL0NH6g4fC2s5atvf3dFO.jpg'style="width:60px;height:50px">
+                                    </div>
+                                    <div class="menu-movie-name"> The Hunger Games</div>
+                                    <div class="menu-remove-icon" >
+                                    <i class="fa fa-minus-circle" id="The Hunger Games@https://image.tmdb.org/t/p/original/coss7RgL0NH6g4fC2s5atvf3dFO.jpg"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>Read All Messages</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
+                <li>
+                        <a href="help.html?lightbox[iframe]=true&lightbox[width]=90p&lightbox[height]=96p" class="page-scroll lightbox">
+                            <i class="fa fa-question-circle"></i>
+                        </a>
+                </li>
                 </ul>
             </div>
         </div>
@@ -96,25 +129,16 @@
             <div class="related-header"><h1 class="related-title ">Related Articles</h1></div>
 
             <div class = "all_related">
-                <div class="related-article panel panel-info">
-                        <div class="panel-heading">
-                              <h3 class="panel-title headline">The Hunger Games' Dominates the Holiday Weekend</h3>
-                       </div>
-                        <div class="panel-body">
-                            <h1 class="snippet">The No. 1 movie in North America was again “The Hunger Games: Mockingjay Part 1.” But moviegoing over the Thanksgiving holiday dropped 21 percent compared with the period a year ago.</h1>
-                            <a href="http://artsbeat.blogs.nytimes.com/2014/11/30/the-hunger-games-dominates-the-holiday-weekend/?lightbox[iframe]=true&lightbox[width]=90p&lightbox[height]=96p" class="page-scroll lightbox" id="prof-related-article"><button class="btn-custom search-btn">See article</a>
-                        </div>
-                    </div>  
-                   
-                </div>
+               <div id="each_article"></div>
             </div>
         </div>
 
         <div class="search">
             <h1 id="search-header" class="title">Search Results</h1>
             <div class= "all_search">
-
-                <div class="search_result">
+                    <ul class="grid cs-style-1">
+                    <div id="searches"></div>
+            <!--     <div class="search_result">
                     <li class="pure-u-1-6 image">
                         <img src="https://image.tmdb.org/t/p/original/coss7RgL0NH6g4fC2s5atvf3dFO.jpg" class="circular">
                     </li>
@@ -205,7 +229,8 @@
                 <li class="pure-u-1-6 desc">
                     <a class="pure-button see-more" href="#">See More Details</a>
                 </li>
-                </div>
+                </div> -->
+            </ul>
              </div>  
         </div>
     </section>
@@ -221,8 +246,38 @@
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="../js/classie.js"></script>
+    <script src="../js/rw2485.js"></script>
+    <script src="../js/alfred_search.js"></script>
+    <script id="searches" type="text/html">
+          <li class="pure-u-1-3 movie_title" style="margin-left:60px;">
+                
+                    <figure class="pop"  data-toggle="popover" title="{{title}}" data-content="And here's some amazing content. It's very engaging. Right?">
+                        <img src={{poster_path}}>
 
+                        <figcaption>
+                            <h3>{{title}}</h3>
+                            <span>Directed by: Gary Ross</span>
 
+                         
+                         
+                        </figcaption>
+                    </figure>
+               
+        </li>
+    </script>
+    <script id="each_article" type="text/html">
+         <div class="related-article panel panel-info">
+                        <div class="panel-heading">
+                              <h3 class="panel-title headline">{{print_headline}}</h3>
+                       </div>
+                        <div class="panel-body">
+                            <h1 class="snippet">{{snippet}}</h1>
+                            <a href="{{web_url}}?lightbox[iframe]=true&lightbox[width]=90p&lightbox[height]=96p" class="page-scroll lightbox" id="prof-related-article"><button class="btn-custom search-btn">See article</a>
+                        </div>
+                    </div>  
+                   
+                </div>
+    </script>
 
 
 

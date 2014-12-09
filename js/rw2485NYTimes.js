@@ -34,14 +34,13 @@ $(document).ready(function(){
 			console.log("error");
 		}
 	});
+
 	// $.ajax({
 	// 	//'url': "https://api.themoviedb.org/3/search/movie/" + +"?api_key=d1d7ccec36948efe0fe4750abc77836f&query=" + searchQuery,
 	// 	'url': "http://api.themoviedb.org/3/movie/" + first_photo["id"] + "?api_key=d1d7ccec36948efe0fe4750abc77836f",
 	// 	'type': 'GET',
 	// 	'dataType': "json",
 	// 	success: function(data, textStats, XMLHttpRequest) {
-
-			
 	// 		console.log(data);
 	// 	},
 	// 	error: function(data, textStatus, errorThrown) {
@@ -50,7 +49,7 @@ $(document).ready(function(){
 	// });
 
 	// $.ajax({
-	// 	'url': "http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=bx8uz4gdtrn2kx87czmpby74&q=The Maze Runner&page_limit=1",
+	// 	'url': "http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=bx8uz4gdtrn2kx87czmpby74&q=Jennifer&page_limit=1",
 	// 	'type': 'GET',
 	// 	'dataType': "jsonp",
 	// 	success: function(data, textStats, XMLHttpRequest) {	

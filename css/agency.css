@@ -210,6 +210,7 @@ fieldset[disabled] .btn-xl.active {
     font-weight: 400;
     letter-spacing: 1px;
     color: #fff;
+    margin-right:-10px;
 }
 
 .navbar-default .nav li a:hover,

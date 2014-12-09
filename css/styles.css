@@ -326,6 +326,10 @@
 	margin-left: 100px;
 	text-align: left;
 }
+.search-btn{
+	margin-left: 70px;
+	text-align: left;
+}
 .btn-custom {
   background-color: hsl(209, 100%, 72%) !important;
   background-repeat: repeat-x;

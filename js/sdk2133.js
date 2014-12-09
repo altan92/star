@@ -94,7 +94,7 @@ function newMovieOnList(name, imgurl){
 				'<a>'+
                      '<div class= "menu-watch-list">'+
                      '<div class="menu-movie-img">'+
-                        '<img src= "'+imgurl+'>'+
+                        '<img src= "'+imgurl+'">'+
                       '</div>'+
                        '<div class="menu-movie-name">'+name+'</div>'+
                        '<div class="menu-remove-icon">'+

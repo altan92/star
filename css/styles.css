@@ -410,6 +410,7 @@
 .watchlist{
 	max-height:350px;
 	overflow-y:scroll; 
+	width: 420px;
 }
 /* Style for watch later list*/
 .menu-watch-list{
@@ -431,6 +432,7 @@
 
 
 .menu-movie-name{
+	width: 50%;
 	float: left;
 	margin-top: 15px;
 	margin-left: 10px;
@@ -438,7 +440,8 @@
 }
 .menu-remove-icon{
 	float: left;
-	margin-top: 15px;
-	margin-left: 10px;
+	margin-top: 25px;
+	margin-left: 8px;
 	color: black;
+	font-size: 18px;
 }

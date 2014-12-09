@@ -405,3 +405,19 @@
 	/*white-space:nowrap;*/
     /*overflow:hidden;*/
 }
+
+
+/* Style for watch later list*/
+.menu-watch-list{
+	height: 80px;
+	border: solid;
+}
+.menu-movie-img{
+	margin: 5px;
+	float: left;
+}
+.menu-movie-name{
+	float: left;
+	margin-top: 15px;
+	margin-left: 10px;
+}

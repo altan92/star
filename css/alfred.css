@@ -19,12 +19,15 @@
 	/*height:130px;*/
 	width:100%;
 }
-.popover a{
+.readmore{
 	color:red;
 }
 
+
 .popover-title{
 	background-color: black;
+}
+.popover-title a{
 	color:#fed136;
 }
 
@@ -67,9 +70,9 @@
 }
 .image{
 	height: 140px;
-width: 140px;
-margin-top: 9px;
-margin-left: 8px;
+	width: 140px;
+	margin-top: 9px;
+	margin-left: 8px;
 }
 .team{
 	height:200px;

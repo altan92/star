@@ -108,12 +108,12 @@
                         <span>WatchList</span>
                          <i class="fa fa-caret-down"></i>
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu watchlist">
                         <li>
                             <a>
                                 <div class= "menu-watch-list">
                                     <div class="menu-movie-img">
-                                    <img src= 'https://image.tmdb.org/t/p/original/coss7RgL0NH6g4fC2s5atvf3dFO.jpg'style="width:60px;height:50px">
+                                    <img src= 'https://image.tmdb.org/t/p/original/coss7RgL0NH6g4fC2s5atvf3dFO.jpg'>
                                     </div>
                                     <div class="menu-movie-name"> The Hunger Games</div>
                                     <div class="menu-remove-icon" >
@@ -123,10 +123,10 @@
                             </a>
                         </li>
                         <li>
-                            <a class="text-center" href="#">
+                            <!-- <a class="text-center" href="#">
                                 <strong>Read All Messages</strong>
                                 <i class="fa fa-angle-right"></i>
-                            </a>
+                            </a> -->
                         </li>
                     </ul>
                     <!-- /.dropdown-messages -->
@@ -567,7 +567,7 @@
     <script id="images" type="text/html">
       <li class="pure-u-1-3 movie_title">
                 
-                    <figure class="pop"  data-html="true" data-toggle="popover" title="{{title}}" data-content="<p>{{overview}}<a href='profile.html?movie={{query}}'>Read More</a></p><hr>{{button}}<div class='rating'>{{rating}}</div>">
+                    <figure class="pop"  data-html="true" data-toggle="popover" title="<a href='profile.html?movie={{query}}'>{{title}}</a>" data-content="<p>{{overview}}<a class='readmore' href='profile.html?movie={{query}}'>Read More</a></p><hr>{{button}}<div class='rating'>{{rating}}</div>">
                         <img src={{poster_path}}>
 
                         <figcaption>

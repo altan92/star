@@ -407,18 +407,29 @@
     /*overflow:hidden;*/
 }
 
-
+.watchlist{
+	max-height:350px;
+	overflow-y:scroll; 
+}
 /* Style for watch later list*/
 .menu-watch-list{
 	height: 80px;
 	border: solid;
 	color: black;
+
 }
 .menu-movie-img{
 	margin: 5px;
 	float: left;
 	color: black;
 }
+
+.menu-movie-img img{
+	width: 100px;
+	height: 65px;
+}
+
+
 .menu-movie-name{
 	float: left;
 	margin-top: 15px;

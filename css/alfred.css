@@ -1,0 +1,84 @@
+.form-control {
+    padding-right: 30px;
+}
+
+.form-control + .glyphicon {
+    position: absolute;
+    right: 0;
+    padding: 8px 27px;
+}
+
+.popover{
+	width:300px;
+	color:black;
+	/*height:300px;*/
+	margin-top: 60px;
+}
+.popover p{
+	/*overflow-y: scroll;*/
+	/*height:130px;*/
+	width:100%;
+}
+.readmore{
+	color:red;
+}
+
+a.hovercolor:hover {
+	color:#fed136;
+}
+.popover-title{
+	background-color: black;
+}
+.popover-title a{
+	color:#fed136;
+}
+
+.btn-custom {
+  background-color: #fed136 !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fed136", endColorstr="#fed136	");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#fed136), to(#fed136	));
+  background-image: -moz-linear-gradient(top, #fed136, #fed136	);
+  background-image: -ms-linear-gradient(top, #fed136, #fed136	);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fed136), color-stop(100%, #fed136	));
+  background-image: -webkit-linear-gradient(top, #fed136, #fed136	);
+  background-image: -o-linear-gradient(top, #fed136, #fed136	);
+  background-image: linear-gradient(#fed136, #fed136	);
+  border-color: #fed136	 #fed136	 hsl(209, 100%, 67%);
+  color: #3 !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.33);
+  -webkit-font-smoothing: antialiased;
+}
+.tit{
+	font:18px Serif;
+	color:white;
+	padding:1px 1px 1px 1px;
+}
+.tag{
+	font:16px Serif;
+	padding:1px 1px 1px 1px;
+}
+.date{
+	font:16px Serif;
+	color:white;
+	padding:1px 1px 1px 1px;
+}
+.rating{
+	float: right;
+}
+#rating{
+	color:white;
+	margin-top: 5px;
+}
+.image{
+	height: 140px;
+	width: 140px;
+	margin-top: 9px;
+	margin-left: 8px;
+	
+}
+.team{
+	height:200px;
+	width: 200px;
+}
+

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta data -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Title -->
+    <title>Stars</title>
+    
+    
+
+
+    <!-- Bootstrap CSS files -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/agency.css" rel="stylesheet">
+    <link href="../font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    
+    <!-- Pure file -->
+    <link rel="stylesheet" href="../css/pure.css">
+    
+    <!-- Lightbox files -->
+    <link rel="stylesheet" type="text/css" href="../lightbox/themes/classic/jquery.lightbox.css" />
+    <script src="../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../lightbox/jquery.lightbox.min.js"></script>
+    <script src="../js/ti2181.js"></script>
+
+    <!-- Grid box files -->
+    <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    <link rel="stylesheet" type="text/css" href="../css/component.css" />
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+        <script src="../js/modernizr.custom.js"></script>
+
+    <script type="text/javascript" src="../js/sdk2133.js"></script>
+
+
+    
+    
+</head>
+
+<body id="profile">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-shrink navbar-default navbar-fixed-top">
+       <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header  page-scroll" >
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="index.html" style="margin-left:40px;">Stars &#9733</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse" >
+                <ul class="nav navbar-nav navbar-right" style="width: 1200px; margin-right: -550px; margin-top: 10px;">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    
+             <div class="col-lg-2">
+                       <form action="search.html" method="get">
+                        <div class="input-group" style="margin-top:5px;width:450px;margin-left:-320px;">
+                           
+                          
+                            <input id="movie" name="movie" type="text" class="form-control" placeholder="Search">
+                            <span class="input-group-btn">
+                            <button class="btn btn-default" type="button submit" value="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+    
+                        </div><!-- /input-group -->
+                    </form>
+  
+                     </div><!-- /.col-lg-6 -->   
+
+                 
+                    
+                    
+                    <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-video-camera"></i>
+                        <span>WatchList</span>
+                         <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu watchlist">
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
+                <li>
+                        <a href="help.html?lightbox[iframe]=true&lightbox[width]=90p&lightbox[height]=96p" class="page-scroll lightbox">
+                            <i class="fa fa-question-circle"></i>
+                        </a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!-- you tube -->
+ <div>
+    
+<!--Video Section-->
+
+ <div id="video" ></div>
+<!--Video Section Ends Here-->
+ </div>
+ 
+ <div id="novid" class="hidden"><br><br><br><br><br></div>
+
+    <div class="prof_body">
+        <!-- <div class="related_movies">
+                <div class="related-header"><h1 class="related-title ">Related Movies</h1></div>
+
+                <div class = "all_related_movies">
+                    <div class="related-article panel panel-info">
+                        <div class="panel-heading">
+                              <h3 class="panel-title headline">The Hunger Games</h3>
+                       </div>
+                        <div class="panel-body">
+                          <table class="movie_desc">
+                                <tr>
+                                    <td><b>Rating:</b> PG-13</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Runtime:</b> 89 Minutes </td>
+                                </tr>
+                                <tr>
+                                    <td><b>Released in theater:</b> 2013-08-10</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Director:</b> Gary Ross</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Cast:</b> Edward Asner, Christopher Plummer, Jphn Ratzenberger, Bob Peterson, and Jordan Nagai</td>
+                                </tr>  
+                            </table>
+                            <button class="btn-custom movie-btn" onclick="window.location.href='#test';">See More</button>
+                        </div>
+                    </div>  
+                    
+                </div>
+
+            </div> -->
+
+         <div class="related related_profile">
+            <div class="related-header"><h1 class="related-title ">Related Articles</h1></div>
+            <div class = "all_related">
+               <div id="each_article"></div>
+            </div>
+        </div>
+
+
+
+
+        <div id="movieinfo"></div>
+        
+         
+        <div class="mov_body">
+            <div class="movie-reviews1">
+                <h1><u>Movie Reviews</u></h1>
+                 <div class="movie-reviews">
+                    <div id="nytreviews"></div>
+                
+          
+
+                </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IcanHazJS -->
+    <script src="../js/ICanHaz.min.js" ></script>
+    <script src="../js/alfred_profile.js" ></script>
+
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="../js/classie.js"></script>
+    <!--<script src="../js/rw2485.js"></script>-->
+    <script id="video" type="text/html">
+        
+         <iframe frameborder="" height="500px" width="100%" allowtransparency="true"  src={{movietrailer}} seamless="seamless" >
+    </iframe>
+    </script>
+]
+     <script id="nytreviews" type="text/html">
+        <div class="review">
+                    <h2>{{headline}}</h1>
+                    <h5>By {{byline}} on {{publication_date}}</h5>
+                    <div class="comment">
+                        <p>{{summary_short}}</p>
+                    </div>
+                     <a href="{{reviewlink}}?lightbox[iframe]=true&lightbox[width]=90p&lightbox[height]=96p" class="page-scroll lightbox" id="prof-related-article"><button class="btn btn-primary btn-warning"><span class="glyphicon glyphicon-film" ></span> Read article</a>
+                    
+        </div>
+        <hr>
+     </script>
+    <script id="movieinfo" type="text/html">
+
+        <div id="info_body">
+            <div class="info">
+                <div class="pure-u-1-5 poster">
+                    <img src= {{poster_path}}>
+                </div>
+                <div class="pure-u-18-24">
+                    <div class="title pro_t">
+                        <h1>{{title}}</h1>
+                    </div>
+                    <hr>
+
+            <div class="actors">
+                <table>
+                    <tr>
+                        <td><b>Rating:</b> {{mpaa_rating}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Runtime:</b> {{runtime}} Minutes </td>
+                    </tr>
+                    <tr>
+                        <td><b>Released in theater:</b> {{release_date}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Genres:</b> {{genre}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Cast:</b> {{cast}}</td>
+                    </tr>
+                    
+                </table>
+            </div>
+
+                    <hr>
+                    <div class="profile_rating">
+                        <div class="audience">
+                                <h1 class='subtitle sub_r'> Audience ratings</h1>
+                                <div class="rate">
+                                    <img src= '../img/star.png'>
+                                    <!-- <img src= 'http://www.clker.com/cliparts/f/9/8/1/1216181106356570529jean_victor_balin_icon_star.svg.med.png'> -->
+                                    <h1>{{audience_score}}</h1>
+                                    <div class="information">
+                                        <table>
+                                            <tr>
+                                                <td><b>Audience rating:</b> {{audience_rating}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Audience score:</b> {{audience_score}}/100</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                </div>
+                        </div>
+                        <!-- <hr> -->
+                        <div class="critic">
+                            <h1 class="subtitle sub_r"> Critic ratings</h1>
+                             <div class="rate">
+                                <img src= '../img/star.png'>
+                                <!-- <img src= 'http://www.clker.com/cliparts/f/9/8/1/1216181106356570529jean_victor_balin_icon_star.svg.med.png'> -->
+                                <h1>{{critics_score}}</h1>
+                                <div class="information">
+                                    <table>
+                                        <tr>
+                                            <td><b>Critic rating:</b> {{critics_rating}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Critic score:</b> {{critics_score}}/100</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="links">
+                        <hr>
+                       {{{button}}}
+                        
+                        <!-- <a class="pure-button" href="#">A Pure Button</a>
+                        <a class="pure-button" href="#">A Pure Button</a>
+                        <a class="pure-button" href="#">A Pure Button</a> -->
+                    </div>
+
+                </div>
+
+            </div>
+               <div class="synopsis">
+                <h1 class="title"><b>Synopsis</b></h1> 
+                <p>
+                    {{{overview}}}
+                </p>
+            </div>
+
+        </div>
+    </script> 
+
+    <script id="each_article" type="text/html">
+         <div class="col-lg-12">
+                    <div class="panel-yellow  related-article">
+                        <div class="panel-heading"  style="background-color:#fed136;color: black; font-weight: 700; paddind-top:10px; width:104% ">
+                            {{{print_headline}}}
+                        </div>
+                        <div class="panel-body">
+                            <p style="color:black">{{snippet}}</p>
+                             <a href="{{web_url}}?lightbox[iframe]=true&lightbox[width]=90p&lightbox[height]=96p" class="page-scroll lightbox" id="prof-related-article"><button class="btn btn-primary btn-warning"><span class="glyphicon glyphicon-film" ></span> Read article</a>
+                        </div>
+                        <div class="panel-footer">
+                            
+                        </div>
+                    </div>
+                    <!-- /.col-lg-4 -->
+                </div>
+    </script>
+
+</body>
+
+</html>

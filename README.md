@@ -2,7 +2,7 @@
 ## Movie Reviews at your Fingertips 
 
 ### What does Stars do?
-Stars is an intuitive web application that provides users the ability to easily read numerous movie reviews for any movie. Users can query any movie title and Stars will return specific movie information such as trailers, reviews, and ratings. Users can check out Critics' Picks and add any movie they are interested in to a watchlist.  
+Stars is an intuitive web application that provides users the ability to easily read numerous movie reviews and related articles for any movie. Users can query any movie title and Stars will return specific movie information such as trailers, reviews, and ratings. Users can check out Critics' Picks and add any movie they are interested in to a watchlist.  
 
 ### Contributors
 Tommy Inouye - A* ([@tominaway1](https://github.com/tominaway1))

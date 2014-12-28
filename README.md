@@ -1,19 +1,14 @@
-sar
-====
-Will use https://developers.google.com/books/docs/v1/getting_started
-for the book reviews
-Not the New York Times
+# Stars
+## Movie Reviews at your Fingertips 
 
+### What does Stars do?
+Stars is an intuitive web application that provides users the ability to easily read numerous movie reviews for any movie. Users can query any movie title and Stars will return specific movie information such as trailers, reviews, and ratings. Users can check out Critics' Picks and add any movie they are interested in to a watchlist.  
 
-New York API: http://developer.nytimes.com/docs/movie_reviews_api/
+### Contributors
+Tommy Inouye - A* ([@tominaway1](https://github.com/tominaway1))
 
+Roshen Weliwatta - Kleene* ([@roshenw](https://github.com/roshenw))
 
-Rotten tomatoes API
-http://developer.rottentomatoes.com/
-API Key: 8nsazkwg3qndf8crf9jvx9p4 
-http://api.rottentomatoes.com/api/public/v1.0/movies/770856799/similar.json?apikey=8nsazkwg3qndf8crf9jvx9p4
-http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=8nsazkwg3qndf8crf9jvx9p4&q=mockingjay
+Alfred Tan - Char* ([@altan92](https://github.com/altan92))
 
-
-
-
+Sankalpa Khadka - Char** ([@sdk21](https://github.com/sdk21))

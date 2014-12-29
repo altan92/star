@@ -1,0 +1,31 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1002" measuredH="1281" mockupW="978" mockupH="1267">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="24" y="14" w="978" h="1267" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//movietime.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::BreadCrumbs" x="840" y="94" w="-1" h="-1" measuredW="81" measuredH="24" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Watchlist%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::FieldSet" x="38" y="324" w="950" h="325" measuredW="200" measuredH="170" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Group%20Name</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Webcam" x="52" y="351" w="180" h="283" measuredW="177" measuredH="146" zOrder="3" locked="false" isInGroup="-1"/>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::VideoPlayer" x="35" y="117" w="953" h="200" measuredW="300" measuredH="200" zOrder="4" locked="false" isInGroup="-1"/>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::MediaControls" x="425" y="197" w="-1" h="-1" measuredW="110" measuredH="36" zOrder="5" locked="false" isInGroup="-1"/>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::TextArea" x="265" y="380" w="511" h="236" measuredW="200" measuredH="140" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Movie%20information%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Canvas" x="39" y="699" w="632" h="170" measuredW="100" measuredH="70" zOrder="7" locked="false" isInGroup="-1"/>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Canvas" x="671" y="699" w="310" h="349" measuredW="100" measuredH="70" zOrder="8" locked="false" isInGroup="-1"/>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Canvas" x="35" y="875" w="632" h="170" measuredW="100" measuredH="70" zOrder="9" locked="false" isInGroup="-1"/>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Canvas" x="38" y="1048" w="632" h="170" measuredW="100" measuredH="70" zOrder="10" locked="false" isInGroup="-1"/>
+  </controls>
+</mockup>

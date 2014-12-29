@@ -1,18 +1,12 @@
 sar
 ====
-Will use https://developers.google.com/books/docs/v1/getting_started
-for the book reviews
-Not the New York Times
+1. Source files are all located in folder src. In order to open the homepage, please go to src/index.html. Rest will follow from the homepage.
 
+2. Development document is included in the root directory and is named Development.pdf
 
-New York API: http://developer.nytimes.com/docs/movie_reviews_api/
+3. User manual is included in the root directory and is named User_Manual.pdf.
 
-
-Rotten tomatoes API
-http://developer.rottentomatoes.com/
-API Key: 8nsazkwg3qndf8crf9jvx9p4 
-http://api.rottentomatoes.com/api/public/v1.0/movies/770856799/similar.json?apikey=8nsazkwg3qndf8crf9jvx9p4
-http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=8nsazkwg3qndf8crf9jvx9p4&q=mockingjay
+4. Video are also included in the root directory and are named video1.mov video2.mov
 
 
 

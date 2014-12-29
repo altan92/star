@@ -51,7 +51,7 @@ $(document).ready(function(){
 		'type': 'GET',
 		'dataType': "json",
 		success: function(data, textStats, XMLHttpRequest) {
-
+			console.log(data);
 			if(data.results.length ==0){
 				$("#searches").html("<h1 style='color:red;'>No movies found!</h1>"); 
 			}

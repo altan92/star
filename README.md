@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-sar
+
+Resources 
 ====
 1. Source files are all located in folder src. In order to open the homepage, please go to src/index.html. Rest will follow from the homepage.
 
@@ -18,7 +18,6 @@ Stars is an intuitive web application that provides users the ability to easily 
 
 ### Contributors
 Tommy Inouye - A* ([@tominaway1](https://github.com/tominaway1))
->>>>>>> 11441cc2a12200052a8a587ca1448e2202033f0c
 
 Roshen Weliwatta - Kleene* ([@roshenw](https://github.com/roshenw))
 
